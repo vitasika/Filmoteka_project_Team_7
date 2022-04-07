@@ -3,8 +3,8 @@
 // Цвет текста
 $primaryTextColor: #000000;
 $secondaryTextColor: #FFFFFF;
-// Акцентированый цвет
-//$accentColor: #d41443;
+// Акцентированый цвет в модалке
+$accentColor: #8C8C8C;;
 // Цвет заголовков
 //$titleColor: #ffa5ba;
 // цвет вторичного текста
@@ -14,7 +14,8 @@ $secondaryTextColor: #FFFFFF;
 
 // Цвета Ховера кнопки
 $hoverBtn: #FF6B01;
-//$secondaryhoverBtn: #ecebeb;
+// Цвета Ховера прозрачной кнопки
+$secondaryhoverBtn: rgba(0, 0, 0, 0.56);;
 
 // -------ФОН-------
 
@@ -32,9 +33,10 @@ $pinkbgСolor: #E5E5E5;
 //$sectionbgColor: #fff5f6;
 //Цвет фона на отзывах
 //$rarebgColor: #fafafa;
-// Цвет фона мобильного меню
-//$footerfone: #F7F7F7;
+// Цвет фона модального окна
+$modalFone: #FFFFFF;
 // Цвет фона футера
+$footerfone: #F7F7F7;
 
 // -------ТЕНИ-------
 
@@ -44,4 +46,4 @@ $pinkbgСolor: #E5E5E5;
 //$mobilemenuShadow: drop-shadow(-8px 0px 20px rgba(0, 0, 0, 0.25));
 
 // -------АНИМАЦИЯ-------
-//$animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+$animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
