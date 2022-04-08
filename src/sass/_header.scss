@@ -5,6 +5,7 @@
 
 .header-container {
     display: flex;
+<<<<<<< HEAD
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
@@ -16,6 +17,16 @@
 
     @media screen and (min-width: 768px) {
         padding-bottom:  80px;
+=======
+    justify-content: space-between;
+    align-items: start;
+    height: 215px;
+    padding-top: 40px;
+    padding-bottom:  80px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url('../images/mobi/Rectangle_mobi.jpg');
+
+    @media screen and (min-width: 768px) {
+>>>>>>> b5f6ffd530c88e0645263fcae7dc2d14081ddbd4
         background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url('../images/tab/Rectangle_tab.jpg');
     }
 
@@ -25,6 +36,7 @@
     }
 }
 
+<<<<<<< HEAD
 .header-logo {
     display: flex;
     align-items: center;
@@ -36,10 +48,13 @@
     }
 }
 
+=======
+>>>>>>> b5f6ffd530c88e0645263fcae7dc2d14081ddbd4
 .nav__list {
     display: flex;
 }
 
+<<<<<<< HEAD
 .nav__item {
     position: relative;
         & + & {
@@ -75,4 +90,17 @@
 
 .icon-logo {
 
+=======
+.search-form {
+align-self: flex-end;
+}
+
+.logo {
+}
+
+.logo-icon{
+    height: 24px;
+    width: 24px;
+    background-color: #ccc;
+>>>>>>> b5f6ffd530c88e0645263fcae7dc2d14081ddbd4
 }
