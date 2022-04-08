@@ -1,0 +1,78 @@
+.header {
+    background-color: #000001;
+    width: 100vw;
+}
+
+.header-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 215px;
+    padding-top: 40px;
+    padding-bottom:  90px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url('../images/mobi/Rectangle_mobi.jpg');
+
+    @media screen and (min-width: 768px) {
+        padding-bottom:  80px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url('../images/tab/Rectangle_tab.jpg');
+    }
+
+    @media screen and (min-width: 1024px) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url('../images/Rectangle\ .jpg');
+
+    }
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.text-logo {
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+}
+
+.nav__list {
+    display: flex;
+}
+
+.nav__item {
+    position: relative;
+        & + & {
+            margin-left: 40px;
+        }
+}
+
+
+.nav__link{ 
+// position: relative;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    text-transform: uppercase;
+    color: $secondaryTextColor;
+
+}
+
+.current-link::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background: $hoverBtn;
+}
+
+.search-form {
+    align-self: end;
+    margin: 0 auto;
+}
+
+.icon-logo {
+
+}
