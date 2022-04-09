@@ -31,13 +31,25 @@
 }
 
 .text-logo {
+    margin-left: 8px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+
+    color: #ffffff;
+
     @media screen and (max-width: 767px) {
         display: none;
     }
 }
 
+.header-nav {
+    width: 70%;
+}
+
 .nav__list {
     display: flex;
+    justify-content: flex-end;
 }
 
 .nav__item {
@@ -49,14 +61,11 @@
 
 
 .nav__link{ 
-// position: relative;
-
     font-weight: 500;
     font-size: 12px;
     line-height: calc(14 / 12);
     text-transform: uppercase;
     color: $secondaryTextColor;
-
 }
 
 .current-link::after {
@@ -71,8 +80,12 @@
 .search-form {
     position: relative;
     align-self: end;
-    margin: 0 auto;
     width: 100%;
+
+    @media screen and (min-width: 768px) {
+        width: 336px;
+        margin: 0 auto;
+    }
 }
 
 .search-form__input {
