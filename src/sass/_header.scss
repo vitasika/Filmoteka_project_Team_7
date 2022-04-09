@@ -69,10 +69,26 @@
 }
 
 .search-form {
+    position: relative;
     align-self: end;
     margin: 0 auto;
+    width: 100%;
 }
 
-.icon-logo {
+.search-form__input {
+    width: inherit;
+    padding: 4px 1px;
+    background-color: transparent;
+    border-bottom: #ffffff solid 0.5px;
+}
 
+.search-form__btn {
+    position: absolute;
+    right: 0;
+    top: 20%;
+    background-color: transparent;
+}
+
+.icon-search {
+    stroke: #ffffff;
 }
