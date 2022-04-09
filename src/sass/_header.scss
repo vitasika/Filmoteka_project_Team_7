@@ -7,7 +7,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-content: space-between;
 
     height: 215px;
     padding-top: 40px;
@@ -27,14 +27,18 @@
 
 .header-logo {
     display: flex;
-    align-items: center;
+    align-self: center;
+}
+
+.icon-logo {
+    align-self: center;
 }
 
 .text-logo {
     margin-left: 8px;
     font-weight: 500;
     font-size: 30px;
-    line-height: 35px;
+    line-height: calc(35 / 30) ;
 
     color: #ffffff;
 
@@ -45,6 +49,7 @@
 
 .header-nav {
     width: 70%;
+    align-self: center;
 }
 
 .nav__list {
@@ -79,7 +84,6 @@
 
 .search-form {
     position: relative;
-    align-self: end;
     width: 100%;
 
     @media screen and (min-width: 768px) {
