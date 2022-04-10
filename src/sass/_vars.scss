@@ -47,3 +47,12 @@ $footerfone: #F7F7F7;
 
 // -------АНИМАЦИЯ-------
 $animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+:root {
+    --page-bg-color: #5e5e63;
+    --container-bg-color: #ffffff;
+    --primary-text-color: #212121;
+    --card-set-gap: 16px;
+    --card-set-gap-top: 32px;
+    --card-shadow: 0px 1px 1px -1px rgba(0, 0, 0, 0.098),
+        0px 1px 1px -1px rgba(0, 0, 0, 0.062), 0px 1px 1px 0px rgba(0, 0, 0, 0.08);
+}
