@@ -13,24 +13,24 @@ function onClickCard(e) {
     return;
   }
   document.body.style.overflow = 'hidden';
-  modalEl.classList.remove('is-hidden');
+  modalEl.classList.remove('modal-window--hidden');
   window.addEventListener('keydown', OnCloseModalEsc);
   modalEl.addEventListener('click', onClickBackdrop);
 }
 
 function onClickCloseButton() {
-  modalEl.classList.add('is-hidden');
+  modalEl.classList.add('modal-window--hidden');
   removeOverflow();
 }
 
 function onClickBackdrop(e) {
-  e.target.classList.contains('backdrop') ? modalEl.classList.add('is-hidden') : false;
+  e.target.classList.contains('backdrop') ? modalEl.classList.add('modal-window--hidden') : false;
   removeOverflow();
 }
 
 function OnCloseModalEsc(e) {
   if (e.code === 'Escape') {
-    modalEl.classList.add('is-hidden');
+    modalEl.classList.add('modal-window--hidden');
     removeOverflow();
     window.removeEventListener('keydown', OnCloseModalEsc);
   }
