@@ -1,7 +1,7 @@
 import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.css';
 const options = {
-   totalItems: 1000,
+   totalItems: 10,
   itemsPerPage: 1,
   visiblePages: 7,
   page: 1,
