@@ -3,6 +3,10 @@
     width: 100vw;
 }
 
+.header--bg-color {
+    background-color: #040000;
+}
+
 .header-container {
     display: flex;
     flex-wrap: wrap;
@@ -21,6 +25,20 @@
 
     @media screen and (min-width: 1024px) {
         background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url('../images/Rectangle.jpg');
+
+    }
+}
+
+.header-container.header-container--library {
+    padding-bottom:  60px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url('../images/mobi/Rectangle_watched_mobi.jpg');
+
+    @media screen and (min-width: 768px) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url('../images/tab/Rectangle_watched_tab.jpg');
+    }
+
+    @media screen and (min-width: 1024px) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url('../images/Rectangle_watched.jpg');
 
     }
 }
@@ -108,4 +126,17 @@
 
 .icon-search {
     stroke: #ffffff;
+}
+
+.btn-wrapper {
+    display: flex;
+    margin: 0 auto;
+}
+
+.header-btn.btn--current {
+    margin-right: 20px;
+
+    @media screen and (min-width: 768px) {
+           margin-right: 32px;
+    }
 }
