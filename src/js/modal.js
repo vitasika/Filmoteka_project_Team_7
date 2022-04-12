@@ -2,7 +2,7 @@ const modalEl = document.querySelector('[data-modal]');
 
 const buttonClose = document.querySelector('.modal__close-button');
 
-const elem = document.querySelector('.card-thumb');
+const elem = document.querySelector('.cards-back-text');
 
 buttonClose.addEventListener('click', toggleModal);
 
