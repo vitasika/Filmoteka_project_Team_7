@@ -9,7 +9,7 @@
   background: $secondaryhoverBtn;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &.is-hidden {
+  &.modal-window--hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -24,6 +24,8 @@
 }
 
 .modal-window {
+  overflow-y: scroll;
+  overflow-x: hidden;
   background: $modalFone;
   width: 280px;
   padding: 48px 20px 40px 20px;
@@ -36,6 +38,7 @@
     width: 750px;
   }
   @media screen and (min-width: 1024px) {
+    overflow: hidden;
     padding: 40px 16px;
     width: 815px;
   }
