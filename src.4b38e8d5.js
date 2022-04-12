@@ -12,4 +12,4 @@ var t;!function(e,n){"object"==typeof exports&&"object"==typeof module?module.ex
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/pagination");var s=require("./js/team-modal/team-modal.js");
 },{"./sass/main.scss":"clu1","./js/pagination":"o8lo","./js/team-modal/team-modal.js":"SNkP"}]},{},["Focm"], null)
-//# sourceMappingURL=/Filmoteka_project_Team_7/src.34f60ab4.js.map
+//# sourceMappingURL=/Filmoteka_project_Team_7/src.4b38e8d5.js.map
