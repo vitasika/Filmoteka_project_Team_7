@@ -4,7 +4,7 @@ import changeHeaderStyles from './changeHeaderStyles';
 export default function onMyLibraryClick(e) {
   e.preventDefault();
 
-  if (e.target.className.includes('current-link')) return;
+  if (e.currentTarget.className.includes('current-link')) return;
 
   const searchFormRef = document.querySelector('#search-form');
 

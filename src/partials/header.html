@@ -14,6 +14,9 @@
       <li class="nav__item">
         <a class="nav__link" href="" id="header-myLibrary">my library</a>
       </li>
+      <li class="nav__item" data-modal-open>
+       <a class="nav__link" href=""> Profile</a>
+      </li>
     </ul>
   </nav>
 
@@ -32,3 +35,44 @@
     </button>
   </form>
 </div>
+
+<!-- modal -->
+<div class="backdrop is-hidden" data-modal-profile>
+  <div class="modal">
+    <h2 class="modal__title">Authorisation</h2>
+    <p class="modal__text">via email</p>
+    <div class="modal section__about">
+      <form class="modal__login-form">
+        <label>
+          <p class="modal__form--label-text">Email</p>
+          <input type="email" name="email" />
+        </label>
+        <label>
+          <p class="modal__form--label-text">Password</p>
+          <input type="password" name="password" />
+        </label>
+        <button type="submit">Login</button>
+      </form>
+
+      <p class="modal__text"><a href="">forgot password?</a></p>
+
+
+      <p class="modal__text">via accounts</p>
+      <ul class="modal__btn--list">
+        <li class="modal__btn--item">
+          <button type="button" class="modal__btn--btn">Google</button>
+        </li>
+        <li class="modal__btn--item">
+          <button type="button" class="modal__btn--btn">Facebook</button>
+        </li>
+      </ul>
+
+      <div class="modal__text">If you don't have an account, register please:
+        <a href="./partials/registration.html"> <button type="button" class="modal__btn--btn">Register</button></a>
+      </div>
+
+      <div>
+        <button type="button" class="modal__btn--close" data-modal-close>Close</button>
+      </div>
+    </div>
+  </div>
