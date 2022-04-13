@@ -10,3 +10,4 @@ import {
   closeModal,
   onLinkClick,
 } from './js/team-modal/team-modal.js';
+import 'animate.css';
