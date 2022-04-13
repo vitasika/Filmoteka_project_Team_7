@@ -1,4 +1,5 @@
-.backdrop{
+
+.backdrop--team{
     position: fixed;
     display: flex;
     z-index: 100;
@@ -17,14 +18,13 @@
 
 
 
-.modal{
-    width: 75%;
-    min-height: 581px;
-    background-color: #fff;
-    border-radius: 4px;
+.modal-team{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(#e6ac6ee8, #f66d23);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     position: relative;
-    padding: 20px;
+    padding: 10px;
 }
 
 .cross{
@@ -39,6 +39,7 @@
 
 
 .our-team{
+    color: rgb(227, 229, 232);
     font-size: 23px;
     line-height: 1.17857;
     font-weight: 500;
@@ -47,7 +48,27 @@
     max-width: max-content;
 }
 
-.team-number{
-    display: block;
-    text-align: center;
+// .team-number{
+//     display: block;
+//     text-align: center;
+// }
+
+.img-container{
+    margin-top: 10px;
+}
+
+.img-container{
+    display: flex;
+}
+
+.team-item{
+    flex-wrap: wrap;
+    flex-basis: calc((100% - 20px) / 2);
+}
+
+.team-img{
+
+    border-radius: 25%;
+    width: 120px;
+    height: 150px;
 }
