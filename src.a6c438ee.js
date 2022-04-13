@@ -28,4 +28,4 @@ function e(e,n=700){const t=document.scrollingElement||document.documentElement,
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/header"),require("./js/pagination"),require("./js/to_top");var e=require("./js/team-modal/team-modal.js");require("animate.css");
 },{"./sass/main.scss":"clu1","./js/header":"cGsR","./js/pagination":"o8lo","./js/to_top":"zpwY","./js/team-modal/team-modal.js":"SNkP","animate.css":"UYQs"}]},{},["Focm"], null)
-//# sourceMappingURL=/Filmoteka_project_Team_7/src.5e5399a0.js.map
+//# sourceMappingURL=/Filmoteka_project_Team_7/src.a6c438ee.js.map
