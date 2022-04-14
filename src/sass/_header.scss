@@ -140,6 +140,7 @@
 }
 
 .search-form__input {
+    color: #ffffff;
   width: inherit;
   padding: 4px 1px;
   background-color: transparent;
@@ -170,6 +171,6 @@
     margin-right: 20px;
 
     @media screen and (min-width: 768px) {
-           margin-right: 32px;
+      margin-right: 32px;
     }
 }
