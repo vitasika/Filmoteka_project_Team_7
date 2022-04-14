@@ -8,7 +8,11 @@ export default function onMyLibraryClick(e) {
 
   const searchFormRef = document.querySelector('#search-form');
 
-  searchFormRef.style.display = 'none';
-  changeHeaderStyles();
-  addBtnMarkup();
+  searchFormRef.classList.add('animate__animated', 'animate__slideOutDown');
+  setTimeout(() => {
+    searchFormRef.style.display = 'none';
+    changeHeaderStyles();
+    addBtnMarkup();
+    searchFormRef.classList.remove('animate__animated', 'animate__slideOutDown');
+  }, 300);
 }

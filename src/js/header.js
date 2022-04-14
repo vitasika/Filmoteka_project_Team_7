@@ -1,3 +1,4 @@
+import 'animate.css';
 import onHomeClick from './header/onHomeClick';
 import onLogoClick from './header/onLogoClick';
 import onMyLibraryClick from './header/onMyLibraryClick';
@@ -11,3 +12,7 @@ const headerLogoRef = document.querySelector('.header-logo');
 headerMyLibraryRef.addEventListener('click', onMyLibraryClick);
 headerHomeRef.addEventListener('click', onHomeClick);
 headerLogoRef.addEventListener('click', onLogoClick);
+
+headerMyLibraryRef.addEventListener('mousedown', e => e.preventDefault());
+headerHomeRef.addEventListener('mousedown', e => e.preventDefault());
+headerLogoRef.addEventListener('mousedown', e => e.preventDefault());
