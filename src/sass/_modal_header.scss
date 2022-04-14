@@ -35,24 +35,30 @@
 .modal-profile__container {
   display: inline-block;
   text-align: center;
-  width: 70%;
-  min-height: 70%;
+  width: 290px;
   background-color: white;
   border-radius: 10px;
   position: relative;
   padding: 20px 30px;
+  @media screen and (min-width: 768px) {
+    width: 500px;
+  }
 }
 
 .modal-profile {
   display: inline-block;
   text-align: center;
-  width: 70%;
+  width: 90%;
 }
 
 .modal-profile__title {
   font-weight: 700;
-  font-size: 24px;
-  line-height: calc(20 / 24);
+  font-size: 18px;
+  line-height: calc(20 / 18);
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+    line-height: calc(20 / 24);
+  }
   margin-bottom: 20px;
   text-align: center;
   text-transform: uppercase;
@@ -99,7 +105,7 @@
   font-weight: 500;
   font-size: 14px;
   line-height: calc(20 / 14);
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 .modal-profile__text {
   font-weight: 500;
@@ -121,15 +127,40 @@
 }
 
 .modal-profile__btn-list {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: calc(-1 * 15px);
+
+  @media screen and (min-width: 768px) {
+    margin-left: calc(-1 * 15px);
+  }
   margin-bottom: 20px;
 }
 
-.modal-profile__btn-item:not(:last-child) {
-  margin-right: 20px;
+.modal-profile__btn-item {
+  flex-basis: 100%;
+  margin-top: 15px;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 1 * 15px);
+    margin-left: 15px;
+  }
 }
 
-.modal-profile__btn-btn {
+.modal-profile__btn-socials {
+  padding: 5px 20px;
+  width: 150px;
+  border: #000 solid 0.5px;
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    background-color: $hoverBtn;
+  }
+}
+
+.modal-profile__btn-reg {
   padding: 5px 20px;
   border: #000 solid 0.5px;
   border-radius: 2px;
