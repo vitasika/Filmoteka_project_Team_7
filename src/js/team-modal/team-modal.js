@@ -3,8 +3,8 @@ const teamModalEl = document.querySelector('[data-modal-backdrop]');
 const closeBtn = document.querySelector('.cross');
 
 
-const openModal = teamLink.addEventListener("click", onLinkClick);
-const closeModal = closeBtn.addEventListener("click", onLinkClick);
+teamLink.addEventListener("click", onLinkClick);
+closeBtn.addEventListener("click", onLinkClick);
 
 function onLinkClick(e){
     e.preventDefault();
