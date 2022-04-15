@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
+    "firebase": "^9.6.11",
     "tui-pagination": "^3.4.1"
   }
 }
