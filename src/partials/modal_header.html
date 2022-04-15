@@ -1,9 +1,14 @@
 <!-- modal -->
 <div class="backdrop-profile profile-hidden" modal-profile-data>
     <div class="modal-profile__container">
+<button type="button" class="modal-profile__btn-close" modal-profile-close>
+    <svg width="20px" height="20px" aria-label="Переключатель мобильного меню">
+        <use class="modal-profile__icon-cross" href="../src/images/sprite1.svg#cross"></use>
+    </svg>
+</button>
+
         <h2 class="modal-profile__title">Authorization</h2>
 <!--        <p class="modal-profile__text">via email</p> -->
-        <div class="modal-profile">
             <form class="modal-profile__form">
                 <label>
                     <p class="modal-profile__label-text">Email</p>
@@ -19,6 +24,7 @@
             <p class="modal-profile__text"><a href="">forgot password?</a></p>
 
             <p class="modal-profile__text">or authenticate using</p>
+            <div class="modal-profile__socials-container">
             <ul class="modal-profile__btn-list">
                 <li class="modal-profile__btn-item">
                     <button type="button" class="modal-profile__btn-socials">Google</button>
@@ -27,16 +33,12 @@
                     <button type="button" class="modal-profile__btn-socials">Facebook</button>
                 </li>
             </ul>
+            </div>
 
-            <div class="modal-profile__text">
-                <p>If you don't have an account, register please:</p>
+            <div class="">
+                <p class="modal-profile__text">If you don't have an account, register please:</p>
                 <a href="./partials/registration.html">
                     <button type="button" class="modal-profile__btn-reg">Register</button></a>
             </div>
-
-            <div>
-                <button type="button" class="modal-profile__btn-close" modal-profile-close>Close</button>
-            </div>
-        </div>
     </div>
 </div>
