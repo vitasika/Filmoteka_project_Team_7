@@ -28,7 +28,8 @@
 .modal-team{
     width: 450px;
     min-height: 580px;
-    background: linear-gradient(#e6ac6ee8, #edded5);
+    background: linear-gradient(#eca66ce1, #d48a5ce2);
+    // background-color: #fff;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     position: relative;
     padding: 10px;
@@ -39,13 +40,11 @@
 }
 
 .cross{
+    background-color: transparent;
+    border: transparent;
     position: absolute;
-    right: 10px;
-    top: 10px;
-    &:hover{
-        cursor: pointer;
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    }
+    top: 5px;
+    right: 5px;
 }
 
 
@@ -59,18 +58,12 @@
     max-width: max-content;
 }
 
-
-.img-container{
-    margin-top: 10px;
-}
-
-
-
 .our-team{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .our-team__item{
