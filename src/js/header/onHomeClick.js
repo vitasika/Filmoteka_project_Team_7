@@ -9,10 +9,8 @@ export default async function onHomeClick(e) {
   const searchFormRef = document.querySelector('#search-form');
 
   btnWrapperRef.classList.add('animate__animated', 'animate__slideOutDown');
-  setTimeout(() => {
-    btnWrapperRef.remove();
-    searchFormRef.style.display = 'block';
-    changeHeaderStyles();
-    searchFormRef.classList.add('animate__animated', 'animate__slideInDown');
-  }, 300);
+  btnWrapperRef.remove();
+  searchFormRef.style.display = 'block';
+  changeHeaderStyles();
+  searchFormRef.classList.add('animate__animated', 'animate__slideInDown');
 }
