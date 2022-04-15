@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.addEventListener('scroll', function () {
     // Если прокрутили дальше 599px, показываем кнопку
-    if (pageYOffset > 100) {
+    if (scrollY > 100) {
       btn.classList.add('show');
       // Иначе прячем
     } else {
