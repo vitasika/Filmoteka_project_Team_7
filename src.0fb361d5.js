@@ -26,10 +26,10 @@ function e(e,n=700){const o=document.scrollingElement||document.documentElement,
 },{}],"RSqK":[function(require,module,exports) {
 const e=document.querySelector("[data-modal]"),d=document.querySelector(".modal__close-button"),n=document.querySelector(".card-set");function o(d){d.target.classList.contains("description_films")&&(document.body.style.overflow="hidden",e.classList.remove("modal-window--hidden"),window.addEventListener("keydown",c),e.addEventListener("click",i))}function t(){e.classList.add("modal-window--hidden"),s()}function i(d){d.target.classList.contains("backdrop")&&e.classList.add("modal-window--hidden"),s()}function c(d){"Escape"===d.code&&(e.classList.add("modal-window--hidden"),s(),window.removeEventListener("keydown",c))}function s(){document.body.style.overflow=""}d.addEventListener("click",t),n.addEventListener("click",o);
 },{}],"SNkP":[function(require,module,exports) {
-const e=document.querySelector('a[data-action="open-modal"]'),t=document.querySelector("[data-modal-backdrop]"),o=document.querySelector(".cross"),c=e.addEventListener("click",n),d=o.addEventListener("click",n);function n(e){e.preventDefault(),document.querySelector("#toTop").classList.toggle("show"),t.classList.toggle("is-hidden")}
+const e=document.querySelector('a[data-action="open-modal"]'),t=document.querySelector("[data-modal-backdrop]"),o=document.querySelector(".cross");function c(e){e.preventDefault(),document.querySelector("#toTop").classList.toggle("show"),t.classList.toggle("is-hidden")}e.addEventListener("click",c),o.addEventListener("click",c);
 },{}],"LS1I":[function(require,module,exports) {
 const e={openModalBtn:document.querySelector("[modal-profile-open]"),closeModalBtn:document.querySelector("[modal-profile-close]"),modal:document.querySelector("[modal-profile-data]")};function o(o){o.preventDefault(),e.modal.classList.toggle("profile-hidden")}e.openModalBtn.addEventListener("click",o),e.closeModalBtn.addEventListener("click",o);
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/header"),require("./js/pagination"),require("./js/to_top"),require("./js/modal"),require("./js/team-modal/team-modal"),require("./js/modal-profile");
 },{"./sass/main.scss":"clu1","./js/header":"cGsR","./js/pagination":"o8lo","./js/to_top":"zpwY","./js/modal":"RSqK","./js/team-modal/team-modal":"SNkP","./js/modal-profile":"LS1I"}]},{},["Focm"], null)
-//# sourceMappingURL=/Filmoteka_project_Team_7/src.e06306ab.js.map
+//# sourceMappingURL=/Filmoteka_project_Team_7/src.0fb361d5.js.map
