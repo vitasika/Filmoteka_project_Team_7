@@ -32,4 +32,4 @@ const e={openModalBtn:document.querySelector("[modal-profile-open]"),closeModalB
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/header"),require("./js/pagination"),require("./js/to_top"),require("./js/modal"),require("./js/team-modal/team-modal"),require("./js/modal-profile");
 },{"./sass/main.scss":"clu1","./js/header":"cGsR","./js/pagination":"o8lo","./js/to_top":"zpwY","./js/modal":"RSqK","./js/team-modal/team-modal":"SNkP","./js/modal-profile":"LS1I"}]},{},["Focm"], null)
-//# sourceMappingURL=/Filmoteka_project_Team_7/src.dad20c81.js.map
+//# sourceMappingURL=/Filmoteka_project_Team_7/src.a499c0a4.js.map
