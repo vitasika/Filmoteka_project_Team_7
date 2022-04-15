@@ -2,21 +2,21 @@
 #toTop {
     position: fixed;
     display: inline-block;
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
     z-index: 1;
     cursor: pointer;
     text-align: center;
-    color: rgb(255, 1, 1);
+    color: rgb(255, 0, 0);
     opacity: 0;
     visibility: hidden;
 }
-
 
 #toTop.show {
     opacity: 1;
     visibility: visible;
     right: calc(8%);
     bottom: calc(11%);
-    animation: pulse 1s linear infinite;
+
+    animation: pulse 1s ease-in-out infinite;
 }
