@@ -15,6 +15,13 @@ const refs = {
   buttonClose: document.querySelector('.modal__close-button'),
   cardList: document.querySelector('.card-set'),
   btn: document.querySelector('#toTop'),
+  authForm: document.querySelector('.modal-profile__form'),
+  authFormBnt: document.querySelector('#signIn'),
+  authGoogleBtn: document.querySelector('#googleAuth'),
+  authFacebookBtn: document.querySelector('#facebookAuth'),
+  regForm: document.querySelector('#registration-form'),
+  regFormBnt: document.querySelector('#signUp'),
+  authDetails: document.querySelector('#profile'),
 };
 
 export { refs };
