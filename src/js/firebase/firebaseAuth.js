@@ -80,8 +80,6 @@ onAuthStateChanged(auth, user => {
       const data = snapshot.val();
       alert(`${data} welcome to filmoteka`);
     });
-  } else {
-    alert('oops something went wrong');
   }
 });
 
