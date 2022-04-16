@@ -13,6 +13,7 @@ function onClickCard(e) {
     return;
   }
   document.body.style.overflow = 'hidden';
+  document.body.style.paddingRight = `${getScrollBarWidth()}px`;
   modalEl.classList.remove('modal-window--hidden');
   window.addEventListener('keydown', OnCloseModalEsc);
   modalEl.addEventListener('click', onClickBackdrop);
@@ -20,22 +21,52 @@ function onClickCard(e) {
 
 function onClickCloseButton() {
   modalEl.classList.add('modal-window--hidden');
-  removeOverflow();
+  addTransition();
 }
 
 function onClickBackdrop(e) {
-  e.target.classList.contains('backdrop') ? modalEl.classList.add('modal-window--hidden') : false;
-  removeOverflow();
+  if (e.target.classList.contains('backdrop')) {
+    modalEl.classList.add('modal-window--hidden');
+    addTransition();
+  }
 }
 
 function OnCloseModalEsc(e) {
   if (e.code === 'Escape') {
     modalEl.classList.add('modal-window--hidden');
-    removeOverflow();
     window.removeEventListener('keydown', OnCloseModalEsc);
+    addTransition();
   }
 }
 
-function removeOverflow() {
-  document.body.style.overflow = '';
+function getScrollBarWidth() {
+  const item = document.createElement('div');
+  item.style.position = 'absolute';
+  item.style.top = '-9999px';
+  item.style.width = '50px';
+  item.style.height = '50px';
+  item.style.overflow = 'scroll';
+  item.style.visibility = 'hidden';
+
+  document.body.appendChild(item);
+
+  const scrollBarWidth = item.offsetWidth - item.clientWidth;
+
+  document.body.removeChild(item);
+
+  return scrollBarWidth;
+}
+
+function showScroll(e) {
+  console.log(e.propertyName);
+  if (e.propertyName === 'transform') {
+    document.body.style.overflow = 'visible';
+    document.body.style.paddingRight = '';
+
+    modalEl.removeEventListener('transitionend', showScroll);
+  }
+}
+
+function addTransition() {
+  modalEl.addEventListener('transitionend', showScroll);
 }
