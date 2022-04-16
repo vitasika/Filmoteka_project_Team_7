@@ -1,30 +1,30 @@
-<!-- modal -->
+<!-- modal authorization -->
 <div class="backdrop-profile profile-hidden" modal-profile-data>
     <div class="modal-profile__container">
-<button type="button" class="modal-profile__btn-close" modal-profile-close>
-    <svg width="20px" height="20px" aria-label="Переключатель мобильного меню">
-        <use class="modal-profile__icon-cross" href="../src/images/sprite1.svg#cross"></use>
-    </svg>
-</button>
+        <button type="button" class="modal-profile__btn-close" modal-profile-close>
+            <svg width="20px" height="20px" aria-label="Переключатель мобильного меню">
+                <use class="modal-profile__icon-cross" href="../src/images/sprite1.svg#cross"></use>
+            </svg>
+        </button>
 
-        <h2 class="modal-profile__title">Authorization</h2>
-<!--        <p class="modal-profile__text">via email</p> -->
-            <form class="modal-profile__form">
-                <label>
-                    <p class="modal-profile__label-text">Email</p>
-                    <input type="email" name="email" />
-                </label>
-                <label>
-                    <p class="modal-profile__label-text">Password</p>
-                    <input type="password" name="password" />
-                </label>
-                <button type="submit">Login</button>
-            </form>
+        <h2 class="modal-profile__title">Welcome to filmoteka</h2>
+        <!--        <p class="modal-profile__text">via email</p> -->
+        <form class="modal-profile__form">
+            <label>
+                <p class="modal-profile__label-text">Email</p>
+                <input type="email" name="email" />
+            </label>
+            <label>
+                <p class="modal-profile__label-text">Password</p>
+                <input type="password" name="password" />
+            </label>
+            <button type="submit" class="modal-profile__form-btn">Sign in</button>
+        </form>
 
-            <p class="modal-profile__text"><a href="">forgot password?</a></p>
+        <p class="modal-profile__text"><a href="">forgot password?</a></p>
 
-            <p class="modal-profile__text">or authenticate using</p>
-            <div class="modal-profile__socials-container">
+        <p class="modal-profile__text">or authenticate using</p>
+        <div class="modal-profile__socials-container">
             <ul class="modal-profile__btn-list">
                 <li class="modal-profile__btn-item">
                     <button type="button" class="modal-profile__btn-socials">Google</button>
@@ -33,12 +33,46 @@
                     <button type="button" class="modal-profile__btn-socials">Facebook</button>
                 </li>
             </ul>
-            </div>
+        </div>
 
-            <div class="">
-                <p class="modal-profile__text">If you don't have an account, register please:</p>
-                <a href="./partials/registration.html">
-                    <button type="button" class="modal-profile__btn-reg">Register</button></a>
-            </div>
+        <div class="">
+            <p class="modal-profile__text">If you don't have an account, register please:</p>
+            <a href="./partials/registration.html">
+                <button type="button" class="modal-profile__btn-socials" modal-profile-register
+                    modal-registration-open>Register</button></a>
+        </div>
     </div>
 </div>
+
+<!-- modal registration -->
+
+<div class="backdrop-profile profile-hidden" modal-registration-data>
+    <div class="modal-profile__container">
+        <button type="button" class="modal-profile__btn-close" modal-registration-close>
+            <svg width="20px" height="20px" aria-label="Переключатель мобильного меню">
+                <use class="modal-profile__icon-cross" href="../src/images/sprite1.svg#cross"></use>
+            </svg>
+        </button>
+        <p class="modal-profile__text">To sign up fill the fields below</p>
+
+        <form class="modal-profile__form" id="registration-form">
+            <label>
+                <p class="modal-profile__label-text">Name</p>
+                <input type="text" name="firstname" id="register-name" />
+            </label>
+            <label>
+                <p class="modal-profile__label-text">Email</p>
+                <input type="email" name="email" id="register-email" />
+            </label>
+            <label>
+                <p class="modal-profile__label-text">Password</p>
+                <input type="password" name="pwd" id="register-pwd" />
+            </label>
+            <label>
+                <p class="modal-profile__label-text">Confirm the password</p>
+                <input type="password" name="confirmpwd" id="register-pwd-confirm" />
+            </label>
+            <button type="submit">Sign up</button>
+        </form>
+
+    </div>
