@@ -8,8 +8,8 @@ function onClickCard(e) {
   if (!e.target.classList.contains('description_films')) {
     return;
   }
-  document.body.style.overflow = 'hidden';
   document.body.style.paddingRight = `${getScrollBarWidth()}px`;
+  document.body.style.overflow = 'hidden';
   refs.modalEl.classList.remove('modal-window--hidden');
   window.addEventListener('keydown', OnCloseModalEsc);
   refs.modalEl.addEventListener('click', onClickBackdrop);
@@ -55,9 +55,9 @@ function getScrollBarWidth() {
 
 function showScroll(e) {
   console.log(e.propertyName);
-  if (e.propertyName === 'transform') {
+  if (e.propertyName == 'transform') {
     document.body.style.overflow = 'visible';
-    document.body.style.paddingRight = '';
+    document.body.style.paddingRight = ' ';
 
     refs.modalEl.removeEventListener('transitionend', showScroll);
   }
