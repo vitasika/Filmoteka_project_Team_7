@@ -52,6 +52,13 @@
   right: 5px;
 }
 
+.modal__close-button-svg {
+  stroke: $primaryTextColor;
+  &:hover {
+    stroke: $hoverBtn;
+  }
+}
+
 .modal-content {
   @media screen and (min-width: 767px) {
     display: flex;
