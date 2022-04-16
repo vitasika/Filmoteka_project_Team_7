@@ -1,4 +1,5 @@
 import changeHeaderStyles from './changeHeaderStyles';
+import { refs } from '../refs/refs';
 
 export default async function onHomeClick(e) {
   e.preventDefault();
@@ -6,11 +7,10 @@ export default async function onHomeClick(e) {
   if (e.currentTarget.className.includes('current-link')) return;
 
   const btnWrapperRef = document.querySelector('.btn-wrapper');
-  const searchFormRef = document.querySelector('#search-form');
 
   btnWrapperRef.classList.add('animate__animated', 'animate__slideOutDown');
   btnWrapperRef.remove();
-  searchFormRef.style.display = 'block';
+  refs.searchFormRef.style.display = 'block';
   changeHeaderStyles();
-  searchFormRef.classList.add('animate__animated', 'animate__slideInDown');
+  refs.searchFormRef.classList.add('animate__animated', 'animate__slideInDown');
 }

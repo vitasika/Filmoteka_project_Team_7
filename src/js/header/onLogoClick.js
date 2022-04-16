@@ -1,12 +1,11 @@
 import animateCSS from './animateCSS';
 import onHomeClick from './onHomeClick';
-
-const headerHomeRef = document.querySelector('#header-home');
+import { refs } from '../refs/refs';
 
 export default function onLogoClick(e) {
   e.preventDefault();
 
-  if (headerHomeRef.className.includes('current-link')) {
+  if (refs.headerHomeRef.className.includes('current-link')) {
     animateCSS('.header-logo', 'headShake');
     return;
   }

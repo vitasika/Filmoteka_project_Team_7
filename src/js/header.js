@@ -4,19 +4,15 @@ import onHomeClick from './header/onHomeClick';
 import onLogoClick from './header/onLogoClick';
 import onMyLibraryClick from './header/onMyLibraryClick';
 import onSearchFormSubmit from './header/onSearchFormSubmit';
+import { refs } from './refs/refs';
 
-const headerMyLibraryRef = document.querySelector('#header-myLibrary');
-const headerHomeRef = document.querySelector('#header-home');
-const headerLogoRef = document.querySelector('.header-logo');
-const formRef = document.querySelector('#search-form');
+refs.searchFormRef.addEventListener('submit', onSearchFormSubmit);
+refs.headerMyLibraryRef.addEventListener('click', onMyLibraryClick);
+refs.headerHomeRef.addEventListener('click', onHomeClick);
+refs.headerLogoRef.addEventListener('click', onLogoClick);
 
-formRef.addEventListener('submit', onSearchFormSubmit);
-headerMyLibraryRef.addEventListener('click', onMyLibraryClick);
-headerHomeRef.addEventListener('click', onHomeClick);
-headerLogoRef.addEventListener('click', onLogoClick);
-
-headerMyLibraryRef.addEventListener('mousedown', e => e.preventDefault());
-headerHomeRef.addEventListener('mousedown', e => e.preventDefault());
-headerLogoRef.addEventListener('mousedown', e => e.preventDefault());
+refs.headerMyLibraryRef.addEventListener('mousedown', e => e.preventDefault());
+refs.headerHomeRef.addEventListener('mousedown', e => e.preventDefault());
+refs.headerLogoRef.addEventListener('mousedown', e => e.preventDefault());
 
 animateCSS('.header-logo', 'backInLeft');
