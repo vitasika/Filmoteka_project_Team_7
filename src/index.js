@@ -5,4 +5,5 @@ import './js/to_top';
 import './js/modal';
 import './js/team-modal/team-modal';
 import './js/modal-profile';
+import './js/modal-register';
 
