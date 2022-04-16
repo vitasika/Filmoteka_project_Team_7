@@ -38,4 +38,4 @@ const e={openModalBtnReg:document.querySelector("[modal-registration-open]"),clo
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/header"),require("./js/pagination"),require("./js/to_top"),require("./js/modal"),require("./js/team-modal/team-modal"),require("./js/modal-profile"),require("./js/modal-register");
 },{"./sass/main.scss":"clu1","./js/header":"cGsR","./js/pagination":"o8lo","./js/to_top":"zpwY","./js/modal":"RSqK","./js/team-modal/team-modal":"SNkP","./js/modal-profile":"LS1I","./js/modal-register":"kDaU"}]},{},["Focm"], null)
-//# sourceMappingURL=/Filmoteka_project_Team_7/src.53f00dc4.js.map
+//# sourceMappingURL=/Filmoteka_project_Team_7/src.f7aafd2e.js.map
