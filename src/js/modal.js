@@ -1,12 +1,8 @@
-const modalEl = document.querySelector('[data-modal]');
+import { refs } from './refs/refs';
 
-const buttonClose = document.querySelector('.modal__close-button');
+refs.buttonClose.addEventListener('click', onClickCloseButton);
 
-const cardList = document.querySelector('.card-set');
-
-buttonClose.addEventListener('click', onClickCloseButton);
-
-cardList.addEventListener('click', onClickCard);
+refs.cardList.addEventListener('click', onClickCard);
 
 function onClickCard(e) {
   if (!e.target.classList.contains('description_films')) {
@@ -14,26 +10,26 @@ function onClickCard(e) {
   }
   document.body.style.overflow = 'hidden';
   document.body.style.paddingRight = `${getScrollBarWidth()}px`;
-  modalEl.classList.remove('modal-window--hidden');
+  refs.modalEl.classList.remove('modal-window--hidden');
   window.addEventListener('keydown', OnCloseModalEsc);
-  modalEl.addEventListener('click', onClickBackdrop);
+  refs.modalEl.addEventListener('click', onClickBackdrop);
 }
 
 function onClickCloseButton() {
-  modalEl.classList.add('modal-window--hidden');
+  refs.modalEl.classList.add('modal-window--hidden');
   addTransition();
 }
 
 function onClickBackdrop(e) {
   if (e.target.classList.contains('backdrop')) {
-    modalEl.classList.add('modal-window--hidden');
+    refs.modalEl.classList.add('modal-window--hidden');
     addTransition();
   }
 }
 
 function OnCloseModalEsc(e) {
   if (e.code === 'Escape') {
-    modalEl.classList.add('modal-window--hidden');
+    refs.modalEl.classList.add('modal-window--hidden');
     window.removeEventListener('keydown', OnCloseModalEsc);
     addTransition();
   }
@@ -63,10 +59,10 @@ function showScroll(e) {
     document.body.style.overflow = 'visible';
     document.body.style.paddingRight = '';
 
-    modalEl.removeEventListener('transitionend', showScroll);
+    refs.modalEl.removeEventListener('transitionend', showScroll);
   }
 }
 
 function addTransition() {
-  modalEl.addEventListener('transitionend', showScroll);
+  refs.modalEl.addEventListener('transitionend', showScroll);
 }
