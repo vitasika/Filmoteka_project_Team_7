@@ -6,7 +6,7 @@
                 <use class="modal-profile__icon-cross" href="../src/images/sprite1.svg#cross"></use>
             </svg>
         </button>
-
+    
         <h2 class="modal-profile__title">Welcome to filmoteka</h2>
         <!--        <p class="modal-profile__text">via email</p> -->
         <form class="modal-profile__form">
@@ -18,11 +18,11 @@
                 <p class="modal-profile__label-text">Password</p>
                 <input type="password" name="password" />
             </label>
-            <button type="submit" id='signIn'class="modal-profile__form-btn">Sign in</button>
+            <button type="submit" id='signIn' class="modal-profile__form-btn">Sign in</button>
         </form>
-
+    
         <p class="modal-profile__text"><a href="">forgot password?</a></p>
-
+    
         <p class="modal-profile__text">or authenticate using</p>
         <div class="modal-profile__socials-container">
             <ul class="modal-profile__btn-list">
@@ -34,13 +34,30 @@
                 </li>
             </ul>
         </div>
-
+    
         <div class="">
             <p class="modal-profile__text">If you don't have an account, register please:</p>
             <a href="./partials/registration.html">
                 <button type="button" class="modal-profile__btn-socials" modal-profile-register
                     modal-registration-open>Register</button></a>
         </div>
+    </div>
+    <div class="modal-user__container">
+        <button type="button" class="modal-profile__btn-close" modal-user-close>
+            <svg width="20px" height="20px" aria-label="Переключатель мобильного меню">
+                <use class="modal-profile__icon-cross" href="../src/images/sprite1.svg#cross"></use>
+            </svg>
+        </button>
+        <picture class="modal-user__picture">
+            <source srcset="./images/anonymous-3.jpg 1x, ./images/anonymous-3.jpg 2x" />
+            <img src="/images/anonymous-3.jpg" alt="Anonymous" />
+        </picture>
+        <div class="modal-user__info">
+            <p class="modal-user__name"></p>
+            <p class="modal-user__email"></p>
+        </div>
+        <button type="submit" id='signOut' class="modal-user__form-btn">Sign Out</button>
+    
     </div>
 </div>
 
