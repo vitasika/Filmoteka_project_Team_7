@@ -75,11 +75,20 @@ function login() {
 
 onAuthStateChanged(auth, user => {
   if (user) {
-    const currentUser = ref(database, 'users/' + user.uid + '/username');
+    const currentUser = ref(database, 'users/' + user.uid);
     onValue(currentUser, snapshot => {
-      const data = snapshot.val();
-      alert(`${data} welcome to filmoteka`);
+      const username = snapshot.val().username;
+      const email = snapshot.val().email;
+      refs.userModalName.innerHTML = `${username}`;
+      refs.userModalMail.innerHTML = `${email}`;
+      refs.authModal.classList.add('modal-profile__hidden');
+      refs.userModal.classList.remove('modal-user__hidden');
     });
+  } else {
+    refs.userModalName.innerHTML = ``;
+    refs.userModalMail.innerHTML = ``;
+    refs.userModal.classList.add('modal-user__hidden');
+    refs.authModal.classList.remove('modal-profile__hidden');
   }
 });
 
@@ -136,6 +145,16 @@ refs.authForm.addEventListener('submit', e => {
   e.preventDefault();
   login();
   e.currentTarget.reset();
+});
+
+refs.signOutBnt.addEventListener('click', e => {
+  signOut(auth)
+    .then(() => {
+      // Sign-out successful.
+    })
+    .catch(error => {
+      // An error happened.
+    });
 });
 
 export { createUser };

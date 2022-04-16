@@ -22,6 +22,11 @@ const refs = {
   regForm: document.querySelector('#registration-form'),
   regFormBnt: document.querySelector('#signUp'),
   authDetails: document.querySelector('#profile'),
+  authModal: document.querySelector('.modal-profile__container'),
+  userModal: document.querySelector('.modal-user__container'),
+  userModalName: document.querySelector('.modal-user__name'),
+  userModalMail: document.querySelector('.modal-user__email'),
+  signOutBnt: document.querySelector('#signOut'),
 };
 
 export { refs };
