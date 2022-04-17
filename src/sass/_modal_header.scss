@@ -50,6 +50,35 @@
   @media screen and (min-width: 768px) {
     width: 500px;
   }
+  overflow: hidden;
+}
+
+.modal-profile__container::after {
+  display: inline-block;
+  position: absolute;
+
+  bottom: 0;
+  right: 0;
+
+  content: '';
+  width: 200px;
+  height: 185px;
+  background-image: url('../images/Merylin-mobile.png');
+
+  @media screen and (min-width: 768px) {
+    width: 350px;
+    height: 323px;
+    background-image: url('../images/Merylin.png');
+  }
+
+  background-repeat: no-repeat;
+
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(100%);
+}
+
+.merylin.modal-profile__container::after {
+  transform: translateX(0);
 }
 
 .modal-profile__title {
@@ -197,4 +226,14 @@
 
 .modal-profile__hidden {
   display: none;
+}
+
+.modal-profile__disabled-scroll {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
