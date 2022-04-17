@@ -22,6 +22,16 @@ refsReg.registrationForm.addEventListener('submit', onFormSubmit);
 function toggleModal(e) {
   e.preventDefault();
   refsReg.modalReg.classList.toggle('profile-hidden');
+
+   if (document.body.classList.contains('modal-profile__disabled-scroll')) {
+    document.body.classList.remove('modal-profile__disabled-scroll');
+    return;
+  }
+
+  if (!document.body.classList.contains('modal-profile__disabled-scroll')) {
+    document.body.classList.add('modal-profile__disabled-scroll');
+    return;
+  }
 }
 
 function onFormInput(e) {
