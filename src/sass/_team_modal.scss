@@ -11,14 +11,7 @@
     transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
     padding: 10px;
     overflow-y: scroll;
-    &.is-hidden{
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        padding: 0;
-        overflow: hidden;
-        border: 0;        
+    &.is-hidden{       
         opacity: 0;
         visibility: hidden;
     }
@@ -124,9 +117,9 @@
     }
     transition: box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    &:hover{
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.492), 0px 1px 1px rgba(0, 0, 0, 0.684), 0px 2px 1px rgba(0, 0, 0, 0.481);
-    }
+    // &:hover{
+    //     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.492), 0px 1px 1px rgba(0, 0, 0, 0.684), 0px 2px 1px rgba(0, 0, 0, 0.481);
+    // }
 }
 
 
@@ -137,36 +130,55 @@
 
 
 .item__bottom-info{
-    
     padding-top: 10px;
     padding-bottom: 8px;
     background-color: #63636380;
     @media screen and (min-width: 1024px) {
         padding-top: 20px;
-        padding-bottom: 18px;
+        padding-bottom: 15px;
     }
 }
 
 .item__name{
     text-align: center;
     color: aliceblue;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.1875;
     font-weight: 500;
     letter-spacing: .03em;
     font-family: 'Poppins', sans-serif;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
+}
+
+.team-img__link{
+   
+    display: block;
+    text-align: center;
+    color: rgb(251, 185, 163);
+    font-size: 12px;
+    line-height: 1.28875;
+    font-weight: 400;
+    letter-spacing: .03em;
+    font-family: 'Poppins', sans-serif;
+    &:hover{
+        color: rgba(238, 129, 45, 0.608);
+    }
+    transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+     margin-bottom: 7px;
 }
 
 .item__role{
     text-align: center;
     color: aliceblue;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.28875;
     font-weight: 400;
     letter-spacing: .03em;
     font-family: 'Poppins', sans-serif;
+    
 }
+
+
 
 .cross-svg{
     stroke: #ffffff;
