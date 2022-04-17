@@ -1,6 +1,6 @@
 <!-- modal authorization -->
 <div class="backdrop-profile profile-hidden" modal-profile-data>
-    <div class="modal-profile__container">
+    <div class="modal-profile__container" id="modal-profile__id">
         <button type="button" class="modal-profile__btn-close modal-profile-cross" modal-profile-close>
             <svg width="20px" height="20px" aria-label="Переключатель мобильного меню">
                 <use class="modal-profile__icon-cross" href="../src/images/sprite1.svg#cross"></use>
@@ -24,7 +24,7 @@
         <p class="modal-profile__text"><a href="">forgot password?</a></p>
     
         <p class="modal-profile__text">or authenticate using</p>
-        <div class="modal-profile__socials-container">
+ <!--       <div class="modal-profile__socials-container">
             <ul class="modal-profile__btn-list">
                 <li class="modal-profile__btn-item">
                     <button type="button" id="googleAuth" class="modal-profile__btn-socials">Google</button>
@@ -33,9 +33,11 @@
                     <button type="button" id="facebookAuth" class="modal-profile__btn-socials">Facebook</button>
                 </li>
             </ul>
-        </div>
+        </div>-->
     
         <div class="">
+<button type="button" id="googleAuth" class="modal-profile__btn-socials mrg">Google</button>
+
             <p class="modal-profile__text">If you don't have an account, register please:</p>
             <a href="./partials/registration.html">
                 <button type="button" class="modal-profile__btn-socials" modal-profile-register
@@ -67,7 +69,7 @@
 <!-- modal registration -->
 
 <div class="backdrop-profile profile-hidden" modal-registration-data>
-    <div class="modal-profile__container">
+    <div class="modal-profile__container"  id="modal-registration__id">
         <button type="button" class="modal-profile__btn-close" modal-registration-close>
             <svg width="20px" height="20px" aria-label="Переключатель мобильного меню">
                 <use class="modal-profile__icon-cross" href="../src/images/sprite1.svg#cross"></use>

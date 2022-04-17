@@ -5,6 +5,7 @@ const refsReg = {
   closeModalBtnReg: document.querySelector('[modal-registration-close]'),
   modalReg: document.querySelector('[modal-registration-data]'),
   registrationForm: document.querySelector('#registration-form'),
+  registrationContainer: document.querySelector('#modal-registration__id'),
 };
 
 let userData = {
@@ -22,6 +23,16 @@ refsReg.registrationForm.addEventListener('submit', onFormSubmit);
 function toggleModal(e) {
   e.preventDefault();
   refsReg.modalReg.classList.toggle('profile-hidden');
+
+  let mpodalProfileH = document.getElementById('modal-registration__id').scrollHeight;
+  let vpHeight = document.body.clientHeight;
+
+  if (vpHeight < mpodalProfileH) {
+    refsReg.registrationContainer.style.height = `${vpHeight}px`;
+  }
+  if (vpHeight >= mpodalProfileH) {
+    refsReg.registrationContainer.style.height = 'auto';
+  }
 
    if (document.body.classList.contains('modal-profile__disabled-scroll')) {
     document.body.classList.remove('modal-profile__disabled-scroll');

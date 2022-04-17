@@ -42,6 +42,7 @@
   padding: 20px 30px;
 
   width: 95%;
+  height: auto;
 
   @media screen and (min-width: 320px) {
     width: 290px;
@@ -51,6 +52,7 @@
     width: 500px;
   }
   overflow: hidden;
+  overflow-y: auto;
 }
 
 .modal-profile__container::after {
@@ -236,4 +238,8 @@
   left: 0;
   top: 0;
   width: 100%;
+}
+
+.mrg {
+  margin-bottom: 20px;
 }
