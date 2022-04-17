@@ -5,7 +5,7 @@ const refs = {
   registerClose: document.querySelector('[modal-profile-register]'),
   closeUserBtn: document.querySelector('[modal-user-close]'),
   profileCross: document.querySelector('.modal-profile-cross'),
-  profileContainer: document.querySelector('.modal-profile__container'),
+  profileContainer: document.querySelector('#modal-profile__id'),
 };
 
 refs.openModalBtn.addEventListener('click', toggleModal);
@@ -19,6 +19,16 @@ function toggleModal(e) {
   e.preventDefault();
  
   refs.modal.classList.toggle('profile-hidden');
+
+  let mpodalProfileH = document.getElementById('modal-profile__id').scrollHeight;
+  let vpHeight = document.body.clientHeight;
+
+  if (vpHeight < mpodalProfileH) {
+    refs.profileContainer.style.height = `${vpHeight}px`;
+  }
+  if (vpHeight >= mpodalProfileH) {
+    refs.profileContainer.style.height = 'auto';
+  }
   
   if (document.body.classList.contains('modal-profile__disabled-scroll')) {
     document.body.classList.remove('modal-profile__disabled-scroll');
