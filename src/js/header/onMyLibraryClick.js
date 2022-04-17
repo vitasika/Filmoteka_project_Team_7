@@ -12,6 +12,7 @@ export default function onMyLibraryClick(e) {
   changeHeaderStyles();
   addBtnMarkup();
   refs.searchFormRef.classList.remove('animate__animated', 'animate__slideOutDown');
+  refs.headerMyLibraryRef.removeEventListener('click', onMyLibraryClick);
   const watchedBtn = document.querySelector('button[data-load="watch"]');
   const qeueBtn = document.querySelector('button[data-load="qeue"]');
   watchedBtn.addEventListener('click', onWatchedBtnClick);
