@@ -2,9 +2,9 @@ import { refs } from './refs/refs';
 
 refs.buttonClose.addEventListener('click', onClickCloseButton);
 
-refs.cardList.addEventListener('click', onClickCard);
+// refs.cardList.addEventListener('click', onClickCard);
 
-function onClickCard(e) {
+function clickCard(e) {
   if (!e.target.classList.contains('description_films')) {
     return;
   }
@@ -67,4 +67,4 @@ function addTransition() {
   refs.modalEl.addEventListener('transitionend', showScroll);
 }
 
-export { getScrollBarWidth };
+export { getScrollBarWidth, clickCard };

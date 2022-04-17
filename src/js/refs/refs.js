@@ -27,6 +27,8 @@ const refs = {
   userModalName: document.querySelector('.modal-user__name'),
   userModalMail: document.querySelector('.modal-user__email'),
   signOutBnt: document.querySelector('#signOut'),
+  inputEl: document.querySelector('.search-form__input'),
+  modalMovieCard: document.querySelector('div[data-act="create"]'),
 };
 
 export { refs };
