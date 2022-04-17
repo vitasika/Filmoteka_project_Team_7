@@ -66,3 +66,5 @@ function showScroll(e) {
 function addTransition() {
   refs.modalEl.addEventListener('transitionend', showScroll);
 }
+
+export { getScrollBarWidth };
