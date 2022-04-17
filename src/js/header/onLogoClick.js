@@ -1,5 +1,5 @@
 import animateCSS from './animateCSS';
-import onHomeClick from './onHomeClick';
+import { onHomeBtnClick } from '../onSubjectEvent/onHomeBtnClick.js';
 import { refs } from '../refs/refs';
 
 export default function onLogoClick(e) {
@@ -10,5 +10,5 @@ export default function onLogoClick(e) {
     return;
   }
 
-  onHomeClick(e);
+  onHomeBtnClick(e);
 }

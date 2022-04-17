@@ -7,3 +7,4 @@ import './js/team-modal/team-modal';
 import './js/modal-profile';
 import './js/modal-register';
 import './js/firebase/firebaseAuth';
+import './js/moviesGallery.js'
