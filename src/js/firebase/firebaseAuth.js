@@ -5,14 +5,12 @@ import {
   onAuthStateChanged,
   signInWithPopup,
   GoogleAuthProvider,
-  FacebookAuthProvider,
-  getRedirectResult,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   updateProfile,
   signOut,
 } from 'firebase/auth';
-import { getDatabase, ref, set, child, get, onValue } from 'firebase/database';
+import { getDatabase, ref, set, onValue } from 'firebase/database';
 import { refs } from '../refs/refs';
 const firebaseConfig = {
   apiKey: 'AIzaSyBgFVW820S_orUiL-KRqyb88sulmcWmLHE',
@@ -29,8 +27,8 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
-const facebookProvider = new FacebookAuthProvider();
 const database = getDatabase();
+
 function createUser(e) {
   const email = refs.regForm.email.value;
   const password = refs.regForm.pwd.value;
@@ -112,31 +110,6 @@ refs.authGoogleBtn.addEventListener('click', e => {
       const email = error.email;
       // The AuthCredential type that was used.
       const credential = GoogleAuthProvider.credentialFromError(error);
-      // ...
-    });
-});
-refs.authFacebookBtn.addEventListener('click', e => {
-  e.preventDefault();
-  signInWithPopup(auth, facebookProvider)
-    .then(result => {
-      // The signed-in user info.
-      const user = result.user;
-      // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-      const credential = FacebookAuthProvider.credentialFromResult(result);
-      const accessToken = credential.accessToken;
-      writeUserData(user);
-
-      // ...
-    })
-    .catch(error => {
-      // Handle Errors here.
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      // The email of the user's account used.
-      const email = error.email;
-      // The AuthCredential type that was used.
-      const credential = FacebookAuthProvider.credentialFromError(error);
-
       // ...
     });
 });
