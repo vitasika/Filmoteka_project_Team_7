@@ -5,11 +5,11 @@ refs.buttonClose.addEventListener('click', onClickCloseButton);
 // refs.cardList.addEventListener('click', onClickCard);
 
 function clickCard(e) {
+  e.preventDefault();
   if (!e.target.classList.contains('description_films')) {
     return;
   }
-  document.body.style.paddingRight = `${getScrollBarWidth()}px`;
-  document.body.style.overflow = 'hidden';
+  deleteScroll();
   refs.modalEl.classList.remove('modal-window--hidden');
   window.addEventListener('keydown', OnCloseModalEsc);
   refs.modalEl.addEventListener('click', onClickBackdrop);
@@ -17,13 +17,13 @@ function clickCard(e) {
 
 function onClickCloseButton() {
   refs.modalEl.classList.add('modal-window--hidden');
-  addTransition();
+  removeScroll();
 }
 
 function onClickBackdrop(e) {
   if (e.target.classList.contains('backdrop')) {
     refs.modalEl.classList.add('modal-window--hidden');
-    addTransition();
+    removeScroll();
   }
 }
 
@@ -31,40 +31,27 @@ function OnCloseModalEsc(e) {
   if (e.code === 'Escape') {
     refs.modalEl.classList.add('modal-window--hidden');
     window.removeEventListener('keydown', OnCloseModalEsc);
-    addTransition();
+    removeScroll();
   }
 }
 
-function getScrollBarWidth() {
-  const item = document.createElement('div');
-  item.style.position = 'absolute';
-  item.style.top = '-9999px';
-  item.style.width = '50px';
-  item.style.height = '50px';
-  item.style.overflow = 'scroll';
-  item.style.visibility = 'hidden';
-
-  document.body.appendChild(item);
-
-  const scrollBarWidth = item.offsetWidth - item.clientWidth;
-
-  document.body.removeChild(item);
-
-  return scrollBarWidth;
+function getBodyScrollTop() {
+  return (
+    self.pageYOffset ||
+    (document.documentElement && document.documentElement.ScrollTop) ||
+    (document.body && document.body.scrollTop)
+  );
 }
 
-function showScroll(e) {
-  console.log(e.propertyName);
-  if (e.propertyName == 'transform') {
-    document.body.style.overflow = 'visible';
-    document.body.style.paddingRight = ' ';
-
-    refs.modalEl.removeEventListener('transitionend', showScroll);
-  }
+function removeScroll() {
+  refs.bodyEl.classList.remove('body-lock');
+  window.scrollTo(0, refs.bodyEl.dataset.scrollY);
 }
 
-function addTransition() {
-  refs.modalEl.addEventListener('transitionend', showScroll);
+function deleteScroll() {
+  refs.bodyEl.dataset.scrollY = getBodyScrollTop();
+  refs.bodyEl.style.top = `-${refs.bodyEl.dataset.scrollY}px`;
+  refs.bodyEl.classList.add('body-lock');
 }
 
-export { getScrollBarWidth, clickCard };
+export { clickCard };

@@ -1,4 +1,5 @@
 const refs = {
+  bodyEl: document.querySelector('body'),
   headerContainerRef: document.querySelector('.header-container'),
   headerMyLibraryRef: document.querySelector('#header-myLibrary'),
   headerHomeRef: document.querySelector('#header-home'),
