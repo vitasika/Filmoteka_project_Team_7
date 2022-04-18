@@ -17,48 +17,49 @@
 .tui-ico-prev {
   overflow: hidden;
 }
-.tui-pagination {
-  & {
-    height: 28px;
-    margin: 14px 0 12px;
-    line-height: normal;
-    text-align: center;
-    font-size: 0;
-  }
-  &.tui-page-btn,
-  &.custom-tui-pagination {
-    display: inline-block;
-    position: relative;
-    width: 40px;
-    height: 40px;
-    padding: 13px 13px 11px 13px;
-    margin-left: 10px;
-    color: #000000;
-    border: transparent;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
-    border-radius: 5px;
-    background-color: transparent;
-    line-height: 1;
-    text-decoration: none;
-    vertical-align: middle;
 
-    /* border-width: 1px 0; */
-  }
-  & .tui-page-btn .tui-page-btn:hover {
-    background-color: #f4f4f4;
-  }
-  & .tui-is-selected,
-  .custom-tui-pagination strong {
-    color: #fff;
-    background: #ff6b08;
-    border-color: transparent;
-    cursor: default;
-  }
+.tui-pagination {
+  height: 28px;
+  margin: 14px 0 12px;
+  line-height: normal;
+  text-align: center;
+  font-size: 0;
 }
 
-.custom-tui-pagination .tui-is-selected:hover {
+.tui-pagination .tui-page-btn {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding: 13px 13px 11px 13px;
+  margin-left: 10px;
+  color: #000000;
+  border: transparent;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  border-radius: 5px;
+  background-color: transparent;
+  line-height: 1;
+  text-decoration: none;
+  vertical-align: middle;
+
+  /* border-width: 1px 0; */
+}
+
+.tui-pagination .tui-page-btn:hover {
+  background-color: #f4f4f4;
+}
+
+.tui-pagination .tui-is-selected,
+.tui-pagination strong {
+  color: #fff;
+  background: #ff6b08;
+  border-color: transparent;
+  cursor: default;
+}
+
+.tui-pagination .tui-is-selected:hover {
   background-color: #ff6b08;
 }
 
