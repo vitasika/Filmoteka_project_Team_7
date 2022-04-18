@@ -28,7 +28,7 @@ async function searchMoviesLoad() {
         const dataMovies = dataObj.results;
         const dataGenresList = await moviesApiService.fetchGenresList(); // данные из API по запросу "жанры" (объект - { genres: (19) […] })
         const dataGenres = dataGenresList.genres;
-        // console.log(dataObj);
+        console.log(dataObj.total_results);
         // console.log(dataMovies);
         if (dataMovies.length === 0) {
             if (!refs.paginationConteiner.classList.contains("paginationNone")) {
@@ -42,7 +42,7 @@ async function searchMoviesLoad() {
             refs.paginationConteiner.classList.remove("paginationNone");
         };
 
-        options.totalItems = moviesApiService.totalPages;
+        options.totalItems = dataObj.total_results;
         const paginationSearch = new Pagination('pagination', options);
         paginationSearch.on('afterMove', async e => {
             galleryClean();

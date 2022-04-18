@@ -28,7 +28,7 @@ async function popularMoviesLoad() {
         const dataMoviesPopular = await moviesApiService.fetchMoviesPopular(); // данные из API по запросу "популярные фильмы" (объект - { page: 1, results: (20) […], total_pages: 33054, total_results: 661074 })
         const dataGenres = dataGenresList.genres; // массив объектов [{ id: 28, name: "Action" } ..... { id: 76, name: "Horor" }]
         const dataMoviesPop = dataMoviesPopular.results; // массив объектов фильмов [{ adult: false, backdrop_path: "/x747ZvF0CcYYTTpPRCoUrxA2cYy.jpg", id: 406759, … } ...]
-        // console.log(dataMoviesPop);
+        // console.log(dataMoviesPopular.total_results);
         // console.log(dataGenresList);
         // console.log(dataGenres);
         
@@ -37,7 +37,7 @@ async function popularMoviesLoad() {
             refs.paginationConteiner.classList.remove("paginationNone");
         };
 
-        options.totalItems = moviesApiService.totalPages;
+        options.totalItems = dataMoviesPopular.total_results;
 
         const pagination = new Pagination('pagination', options);
         pagination.on('afterMove', async e => {
