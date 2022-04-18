@@ -37,6 +37,8 @@ async function popularMoviesLoad() {
             refs.paginationConteiner.classList.remove("paginationNone");
         };
 
+        options.totalItems = moviesApiService.totalPages;
+
         const pagination = new Pagination('pagination', options);
         pagination.on('afterMove', async e => {
             galleryClean();
