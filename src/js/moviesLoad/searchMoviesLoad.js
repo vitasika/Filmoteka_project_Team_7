@@ -31,7 +31,10 @@ async function searchMoviesLoad() {
         // console.log(dataObj);
         // console.log(dataMovies);
         if (dataMovies.length === 0) {
-            return Notiflix.Notify.success('Sorry, there are no movies matching your search query.');  
+            if (!refs.paginationConteiner.classList.contains("paginationNone")) {
+                return refs.paginationConteiner.classList.add("paginationNone");
+            };
+            return Notiflix.Notify.success('Sorry, there are no movies matching your search query.');
         };
 
         galleryCollectionCreate(dataMovies, dataGenres);
@@ -39,6 +42,7 @@ async function searchMoviesLoad() {
             refs.paginationConteiner.classList.remove("paginationNone");
         };
 
+        options.totalItems = moviesApiService.totalPages;
         const paginationSearch = new Pagination('pagination', options);
         paginationSearch.on('afterMove', async e => {
             galleryClean();
