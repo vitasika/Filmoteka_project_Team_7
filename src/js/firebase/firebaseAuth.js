@@ -71,6 +71,37 @@ function login() {
   });
 }
 
+function setOnDatabase(data) {
+  onAuthStateChanged(auth, user => {
+    if (user) {
+      const library = ref(database, 'users/' + user.uid + '/library' + '/watchedFilm');
+      push(ref(database, 'users/' + user.uid + '/library' + '/watchedFilm'), {
+        watchedFilm: data,
+      });
+      console.log(library);
+    } else {
+      alert('SET: Enter on your account');
+    }
+  });
+}
+
+function getOnDatabase(data) {
+  onAuthStateChanged(auth, user => {
+    if (user) {
+      const library = ref(database, 'users/' + user.uid + '/library' + '/watchedFilm');
+      onValue(library, snapshot => {
+        snapshot.forEach(childSnapshot => {
+          const childData = childSnapshot.child('/watchedFilm').val();
+          console.log(childData);
+          return childData;
+        });
+      });
+    } else {
+      alert('GET: Enter on your account');
+    }
+  });
+}
+
 onAuthStateChanged(auth, user => {
   if (user) {
     const currentUser = ref(database, 'users/' + user.uid);
@@ -131,3 +162,5 @@ refs.signOutBnt.addEventListener('click', e => {
 });
 
 export { createUser };
+export { setOnDatabase };
+export { getOnDatabase };
