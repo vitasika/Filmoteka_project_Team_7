@@ -13,7 +13,7 @@ async function onHomeBtnClick(evt) {
     moviesApiService.resetPage();
     evt.preventDefault();
 
-    if (evt.currentTarget.className.includes('current-link')) { return; };
+    if (evt.currentTarget.className.includes('current-link')) return; ;
 
     const btnWrapperRef = document.querySelector('.btn-wrapper');
     const searchFormRef = document.querySelector('#search-form');
