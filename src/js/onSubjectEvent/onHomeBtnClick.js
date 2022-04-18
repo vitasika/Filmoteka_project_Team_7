@@ -14,8 +14,8 @@ async function onHomeBtnClick(evt) {
   evt.preventDefault();
   popularMoviesLoad();
 
-  if (evt.currentTarget.className.includes('current-link')) return;
-
+    if (evt.currentTarget.className.includes('current-link')) return; ;
+  
   const btnWrapperRef = document.querySelector('.btn-wrapper');
 
   btnWrapperRef.classList.add('animate__animated', 'animate__slideOutDown');

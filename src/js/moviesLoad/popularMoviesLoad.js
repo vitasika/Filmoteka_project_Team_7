@@ -33,6 +33,9 @@ async function popularMoviesLoad() {
         // console.log(dataGenres);
         
         galleryCollectionCreate(dataMoviesPop, dataGenres);
+        if (refs.paginationConteiner.classList.contains("paginationNone")) {
+            refs.paginationConteiner.classList.remove("paginationNone");
+        };
 
         const pagination = new Pagination('pagination', options);
         pagination.on('afterMove', async e => {

@@ -35,6 +35,9 @@ async function searchMoviesLoad() {
         };
 
         galleryCollectionCreate(dataMovies, dataGenres);
+        if (refs.paginationConteiner.classList.contains("paginationNone")) {
+            refs.paginationConteiner.classList.remove("paginationNone");
+        };
 
         const paginationSearch = new Pagination('pagination', options);
         paginationSearch.on('afterMove', async e => {
