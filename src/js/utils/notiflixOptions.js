@@ -8,10 +8,10 @@ const notiflixOptions = Notiflix.Notify.init({
   opacity: 1,
   borderRadius: '5px',
   rtl: false,
-  timeout: 4500,
+  timeout: 2000,
   messageMaxLength: 110,
   backOverlay: false,
-  backOverlayColor: 'rgba(0,0,0,0.5)',
+  backOverlayColor: 'transparent',
   plainText: true,
   showOnlyTheLastOne: false,
   clickToClose: false,
@@ -127,4 +127,23 @@ const notiflixReportOptions = Notiflix.Report.init({
   },
 });
 
-export { notiflixOptions, notiflixReportOptions };
+const notiflixLoadingOptions = Notiflix.Loading.init({
+  className: 'notiflix-loading',
+  zindex: 4000,
+  backgroundColor: 'transparent',
+  rtl: false,
+  fontFamily: 'Quicksand',
+  cssAnimation: true,
+  cssAnimationDuration: 1000,
+  clickToClose: false,
+  customSvgUrl: null,
+  customSvgCode: null,
+  svgSize: '80px',
+  svgColor: '#32c682',
+  messageID: 'NotiflixLoadingMessage',
+  messageFontSize: '15px',
+  messageMaxLength: 34,
+  messageColor: '#dcdcdc',
+});
+
+export { notiflixOptions, notiflixReportOptions, notiflixLoadingOptions };
