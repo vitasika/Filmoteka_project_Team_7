@@ -4,7 +4,6 @@ import onHomeClick from './header/onHomeClick';
 import onLogoClick from './header/onLogoClick';
 import onMyLibraryClick from './header/onMyLibraryClick';
 import onSearchFormSubmit from './header/onSearchFormSubmit';
-
 const headerMyLibraryRef = document.querySelector('#header-myLibrary');
 const headerHomeRef = document.querySelector('#header-home');
 const headerLogoRef = document.querySelector('.header-logo');
