@@ -23,6 +23,10 @@ function onWatchedBtnClick(evt) {
 
     galleryClean();
     storageGalleryCreate(dataArray);
+    
+    if (!refs.paginationConteiner.classList.contains("paginationNone")) {
+        return refs.paginationConteiner.classList.add("paginationNone");
+    };
 }
 
 export { onWatchedBtnClick };

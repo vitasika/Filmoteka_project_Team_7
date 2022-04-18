@@ -29,6 +29,7 @@ const refs = {
   signOutBnt: document.querySelector('#signOut'),
   inputEl: document.querySelector('.search-form__input'),
   modalMovieCard: document.querySelector('div[data-act="create"]'),
+  paginationConteiner: document.querySelector('.pagination-container'),
 };
 
 export { refs };
