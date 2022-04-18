@@ -1,6 +1,7 @@
 import axios from "axios";
 import Notiflix from 'notiflix';
 import { Loading } from 'notiflix/build/notiflix-loading-aio';
+import { notiflixOptions, notiflixReportOptions, notiflixLoadingOptions } from "../utils/notiflixOptions.js";
 import { popularMoviesLoad } from "../moviesLoad/popularMoviesLoad.js";
 import { searchMoviesLoad } from "../moviesLoad/searchMoviesLoad.js";
 
@@ -35,7 +36,7 @@ export default class MoviesApiService {
     }
 
     async fetchMoviesPopular() {
-        Loading.circle({ onSearchFormSubmit: true, svgSize: '80px', }); // библ. Notiflix
+        Loading.circle({ onSearchFormSubmit: true, backgroundColor: 'rgba(0,0,0,0)', svgSize: '80px',}); // библ. Notiflix
         const searchParams = `${this.lang}&${this.imgLang}&page=${this.page}`;
         const dataObject = await axios.get(`${this.BASE_URL}${this.popular}${this.API_KEY}&${searchParams}`); // запрос через библ. axios
         const { data } = dataObject;
@@ -47,7 +48,7 @@ export default class MoviesApiService {
     }
 
     async fetchMoviesQuery() {
-        Loading.circle({ onSearchFormSubmit: true, svgSize: '80px', }); // библ. Notiflix
+        Loading.circle({ onSearchFormSubmit: true, backgroundColor: 'rgba(0,0,0,0)', svgSize: '80px', }); // библ. Notiflix
         const searchParams = `${this.lang}&${this.imgLang}&query=${this.searchQuery}&page=${this.page}`;
         const dataObject = await axios.get(`${this.BASE_URL}${this.query}${this.API_KEY}&${searchParams}`); // запрос через библ. axios
         const { data } = dataObject;
@@ -59,7 +60,7 @@ export default class MoviesApiService {
     }
 
     async fetchMovieId() {
-        Loading.circle({ onSearchFormSubmit: true, svgSize: '80px', }); // библ. Notiflix
+        Loading.circle({ onSearchFormSubmit: true, backgroundColor: 'rgba(0,0,0,0)', svgSize: '80px', }); // библ. Notiflix
         const searchParams = `${this.lang}&${this.imgLang}`;
         const dataObject = await axios.get(`${this.BASE_URL}${this.movieId}${this.movie_id}${this.API_KEY}&${searchParams}`); // запрос через библ. axios
         const { data } = dataObject;
