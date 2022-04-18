@@ -7,7 +7,7 @@ import { errorCatch } from "../utils/errorCatch.js";
 import { galleryCollectionCreate, galleryClean } from "../moviesGalleryCreate/galleryCreate.js";
 import { notiflixOptions, notiflixReportOptions } from "../utils/notiflixOptions.js";
 import Pagination from 'tui-pagination';
-// import 'tui-pagination/dist/tui-pagination.css';
+import 'tui-pagination/dist/tui-pagination.css';
 
 const options = {
     totalItems: 1000,
