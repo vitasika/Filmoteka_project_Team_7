@@ -27,11 +27,20 @@
   background-color: $hoverBtn;
 }
 
-.btn.btn--current-modal {
+.modal-content__container-btn .btn {
   border: 1px solid #000000;
-  background: #ffffff;
+  background-color: #ffffff;
   color: #000000;
-  margin-left: 15px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:not(:last-child) {
+    margin-right: 19px;
+  }
+  @media screen and (min-width: 1024px) {
+    &:hover {
+      box-shadow: 0px 8px 43px rgb(255 107 1 / 60%);
+    }
+  }
 }
 
 .btn.btn-modal {
