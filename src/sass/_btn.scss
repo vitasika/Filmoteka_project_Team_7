@@ -27,7 +27,7 @@
   background-color: $hoverBtn;
 }
 
-.modal-content__container-btn .btn {
+.modal-content__right .btn {
   border: 1px solid #000000;
   background-color: #ffffff;
   color: #000000;
@@ -45,8 +45,19 @@
 
 .btn.btn-modal {
   width: 110px;
+  margin-left: auto;
+  margin-right: auto;
+  &:focus {
+    background-color: rgb(255, 107, 1);
+    color: rgb(255, 255, 255);
+    border-color: rgb(255, 107, 1);
+  }
 
   @media screen and (min-width: 768px) {
     width: 125px;
+    margin: 0;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 136px;
   }
 }
