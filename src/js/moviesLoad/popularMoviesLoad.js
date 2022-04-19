@@ -9,15 +9,7 @@ import { notiflixOptions, notiflixReportOptions } from "../utils/notiflixOptions
 import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.css';
 
-const options = {
-    totalItems: 1000,
-        itemsPerPage: 20,
-        visiblePages: 7,
-        centerAlign: false,
-    page: 1,
-    firstItemClassName: 'tui-first-child',
-    lastItemClassName: 'tui-last-child',
-};
+
 
 async function popularMoviesLoad() {
     
@@ -58,5 +50,18 @@ async function popularMoviesLoad() {
         errorCatch(error);
     };
 };
+
+const options = {
+    totalItems: 1000,
+    itemsPerPage: 20,
+       visiblePages: 7,
+        centerAlign: false,
+    page: 1,
+    firstItemClassName: 'tui-first-child',
+    lastItemClassName: 'tui-last-child',
+};
+if (window.innerWidth < 767) {
+    options.visiblePages = 5;
+}
 
 export { popularMoviesLoad };
