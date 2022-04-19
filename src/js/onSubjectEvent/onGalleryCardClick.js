@@ -12,7 +12,7 @@ import { notiflixOptions, notiflixReportOptions } from "../utils/notiflixOptions
 
 async function onGalleryCardClick(evt) {
     if (!evt.target.classList.contains('description_films')) {
-    return;
+        return;
     }
 
     moviesApiService.movie_id = evt.target.dataset.id;
@@ -20,12 +20,12 @@ async function onGalleryCardClick(evt) {
 
     const addToWatchedBtn = document.querySelector('button[data-add="watched"]');
     const addToHellBtn = document.querySelector('button[data-add="queue"]');
-    const trailerBtn = document.querySelector('button[data-tre="treiler"]');
-    trailerBtn.addEventListener('click', onTreilerBtnClick);
+    // const trailerBtn = document.querySelector('button[data-tre="treiler"]');
+    // trailerBtn.addEventListener('click', onTreilerBtnClick);
     const savedData = localStorage.getItem('saved-data');
     if (!savedData) {
-            return;
-        };
+        return;
+    };
     const newDataId = moviesApiService.dataStorageObj;
     const data = JSON.parse(savedData);
     if (data.watched.some(value => value.movieId_card === newDataId.movieId_card)) {
