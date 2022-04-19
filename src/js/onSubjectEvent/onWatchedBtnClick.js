@@ -5,11 +5,16 @@ import { moviesApiService } from "../moviesGallery.js";
 import MoviesApiService from "../MoviesApiService/moviesApiService.js";
 import { errorCatch } from "../utils/errorCatch.js";
 import { galleryCollectionCreate, galleryClean } from "../moviesGalleryCreate/galleryCreate.js";
-import { storageGalleryCreate } from "../moviesGalleryCreate/starageGalleryCreate.js"
+import { storageGalleryCreate } from "../moviesGalleryCreate/starageGalleryCreate.js";
+import { setOnDatabase } from '../firebase/firebaseAuth';
+import { getOnDatabase } from '../firebase/firebaseAuth';
 import { notiflixOptions, notiflixReportOptions } from "../utils/notiflixOptions.js";
 
-function onWatchedBtnClick(evt) {
+async function onWatchedBtnClick(evt) {
     const savedData = localStorage.getItem('saved-data');
+    // const savedData = await getOnDatabase();
+    // const saveData = savData[0];
+    // console.log("savedData -",savedData)
     if (!savedData) {
         Notiflix.Notify.success('Sorry, there are no added movies.');
         return;

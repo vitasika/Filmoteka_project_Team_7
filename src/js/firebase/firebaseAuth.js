@@ -10,7 +10,7 @@ import {
   updateProfile,
   signOut,
 } from 'firebase/auth';
-import { getDatabase, ref, set, onValue } from 'firebase/database';
+import { getDatabase, ref, set, onValue, push } from 'firebase/database';
 import { refs } from '../refs/refs';
 const firebaseConfig = {
   apiKey: 'AIzaSyBgFVW820S_orUiL-KRqyb88sulmcWmLHE',
@@ -78,29 +78,54 @@ function setOnDatabase(data) {
       push(ref(database, 'users/' + user.uid + '/library' + '/watchedFilm'), {
         watchedFilm: data,
       });
-      console.log(library);
+      console.log("set -",library);
     } else {
       alert('SET: Enter on your account');
     }
   });
 }
 
-function getOnDatabase(data) {
+function getOnDatabase() {
   onAuthStateChanged(auth, user => {
     if (user) {
       const library = ref(database, 'users/' + user.uid + '/library' + '/watchedFilm');
+      
       onValue(library, snapshot => {
+        
         snapshot.forEach(childSnapshot => {
           const childData = childSnapshot.child('/watchedFilm').val();
-          console.log(childData);
+          // console.log("get -",childData);
           return childData;
         });
       });
+      // console.log(data[0]);
+      // return data[0];
     } else {
       alert('GET: Enter on your account');
     }
   });
 }
+
+// function getOnDatabase() {
+//   const user = auth.currentUser;
+//   if (user) {
+//     const library = ref(database, 'users/' + user.uid + '/library' + '/watchedFilm');
+//     const data = [];
+//     onValue(library, snapshot => {
+//       snapshot.forEach(childSnapshot => {
+//         const childData = childSnapshot.child('/watchedFilm').val();
+//         // console.log("get -",childData);
+//         data.push(childData);
+//         return data;
+//       });
+//     });
+//     console.log('get -', Object.keys(data));
+//     return Object.values(data);
+//   } else {
+//     alert('GET: Enter on your account');
+//   }
+// }
+
 
 onAuthStateChanged(auth, user => {
   if (user) {

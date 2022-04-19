@@ -3,7 +3,7 @@ import { refs } from "../refs/refs.js";
 const BASE_POSTER_URL = "https://image.tmdb.org/t/p/w500/";
 
 function movieCardCreate(data) {
-    const { genres, id, original_title, overview, popularity, poster_path, title, vote_average, vote_count } = data;
+    const { genres, homepage, id, original_title, overview, popularity, poster_path, title, vote_average, vote_count } = data;
     
     const genresString = genres.map((genre) => {
         return genre.name;
@@ -63,6 +63,7 @@ function movieCardCreate(data) {
                                 <p class="modal-content__primary-text primary-text--black modal-content__about-text-lh">
                                     ${overview}
                                 </p>
+                                
                             </div>
                             <div class="modal-content__container-btn">
                                 <button type="button" class="btn btn--current" data-add="watched">ADD TO WATCHED</button>
