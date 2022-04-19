@@ -26,23 +26,21 @@
   text-transform: uppercase;
 }
 
-.card-set>.item {
+.card-set > .item {
   margin-top: 20px;
-  transition: all .25s cubic-bezier(.34, .04, .37, .73);
+  transition: all 0.25s cubic-bezier(0.34, 0.04, 0.37, 0.73);
   cursor: pointer;
 
   @media screen and (min-width: 768px) {
     width: calc((100% - 2 * var(--card-set-gap-top)) / 2);
     margin-left: var(--card-set-gap-top);
     margin-top: var(--card-set-gap-top);
-
   }
 
   @media screen and (min-width: 1024px) {
-    width: calc((100% - 3 * var(--card-set-gap)) /3);
+    width: calc((100% - 3 * var(--card-set-gap)) / 3);
     margin-top: 32px;
     margin-left: var(--card-set-gap);
-
   }
 }
 
@@ -65,7 +63,7 @@
   font-weight: 500;
   font-size: 12px;
   line-height: calc(16 / 12);
-  color: #FF6B08;
+  color: #ff6b08;
 }
 
 .card {
@@ -81,61 +79,64 @@
   transition: 1s;
   backface-visibility: hidden;
   background-color: rgba(255, 255, 255, 0.418);
-
 }
 
 .cards-back-text {
-    font-weight: 500;
-    line-height: 20px;
-    color: #3c0080fc;
-    position: absolute;
-    height: 92%;
-    width: 100%;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    transition: 1s;
-    backface-visibility: hidden;
-    background-color: rgb(255 242 185 / 83%);
-    border-radius: 4px 4px 4px 4px;
-    transform: rotateY(180deg);
-    background-image: url(..//images/bg_film.png);
-    background-repeat: no-repeat;
-    background-blend-mode: color-burn;
-    cursor: url('..//images/eye.png'),
-    auto;
+  font-weight: 500;
+  line-height: 20px;
+  color: #3c0080fc;
+  position: absolute;
+  height: 92%;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  transition: 1s;
+  backface-visibility: hidden;
+  background-color: rgb(255 242 185 / 83%);
+  border-radius: 4px 4px 4px 4px;
+  transform: rotateY(180deg);
+  background-image: url(..//images/bg_film.png);
+  background-repeat: no-repeat;
+  background-blend-mode: color-burn;
+  cursor: url('..//images/eye.png'), auto;
 }
 
 .card:hover .cards-wrapper {
   transform: rotateY(180deg);
-    backface-visibility: visible;
+  backface-visibility: visible;
 }
 
 .card:hover .cards-back-text {
-transform: rotateY(360deg);
+  transform: rotateY(360deg);
 }
 
 .description_films {
-    padding: 64px 16px 0px 32px;
-    width: 100%;
+  padding: 64px 16px 0px 32px;
+  width: 100%;
 }
 
 .btn_more {
-position: absolute;
-bottom: 15%;
-display: flex;
-justify-content: center;
-transition: 1s;
-backface-visibility: hidden;
+  position: absolute;
+  bottom: 15%;
+  display: flex;
+  justify-content: center;
+  transition: 1s;
+  backface-visibility: hidden;
 }
 
 .no-poster {
   background-color: rgba(255, 255, 255, 0.418);
-  background-image: url('..//images/no-pictures.png');
-  background-size: auto;
+  background-image: url('..//images/no-pictures-mobile.png');
   background-repeat: no-repeat;
-  width: 100%;
+  background-size: 280px 455px;
+  width: 280px;
   height: 455px;
-  top: 0;
-  left: 0;
+  background-position: center;
+  @media screen and (min-width: 767px) {
+    background-image: url('..//images/no-pictures-tab.png');
+  }
+  @media screen and (min-width: 1024px) {
+    background-image: url('..//images/no-pictures-full.png');
+  }
 }
