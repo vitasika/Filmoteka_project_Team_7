@@ -83,6 +83,9 @@ export default class MoviesApiService {
         const searchParams = `${this.lang}`;
         const dataObject = await axios.get(`${this.BASE_URL}${this.movieId}${this.movie_id}${this.treiler}${this.API_KEY}&${searchParams}`); // запрос через библ. axios
         const { data } = dataObject;
+        if (data.results.length === 0 || !data.results[0].key) {
+            return;
+        }
         
         this.dataStorageObj.movieKey = data.results[0].key;
         
