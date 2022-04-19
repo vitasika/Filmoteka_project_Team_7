@@ -125,18 +125,13 @@
   backface-visibility: hidden;
 }
 
-// .no-poster {
-//   background-color: rgba(255, 255, 255, 0.418);
-//   background-image: url('..//images/no-pictures-mobile.png');
-//   background-repeat: no-repeat;
-//   background-size: 280px 455px;
-//   width: 280px;
-//   height: 455px;
-//   background-position: center;
-//   @media screen and (min-width: 767px) {
-//     background-image: url('..//images/no-pictures-tab.png');
-//   }
-//   @media screen and (min-width: 1024px) {
-//     background-image: url('..//images/no-pictures-full.png');
-//   }
-// }
+.no-poster {
+  background-color: rgba(255, 255, 255, 0.418);
+  // background-image: url('..//images/no-pictures-2.png');
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 455px;
+  top: 0;
+  left: 0;
+}
