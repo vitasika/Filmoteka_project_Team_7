@@ -34,7 +34,7 @@ function movieCardCreate(data) {
 
                     <div class="modal-content" data-id="${id}">
                         <div class="modal-content__left no-poster-modal">
-                            <img src="${moviePoster}" alt="" loading="lazy" />
+                            <img src="${moviePoster}" alt="${title}" onerror="this.style.visibility = 'hidden'" loading="lazy" />
                         </div>
                         <div class="modal-content__right">
                             <h2 class="modal-content__film-title primary-text--black"> ${title} </h2>
