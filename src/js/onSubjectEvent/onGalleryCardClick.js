@@ -6,6 +6,7 @@ import MoviesApiService from "../MoviesApiService/moviesApiService.js";
 import { errorCatch } from "../utils/errorCatch.js";
 import { clickCard } from "../modal.js"
 import { idMovieLoad } from "../moviesLoad/idMovieLoad.js";
+import { onTreilerBtnClick } from "./onTreilerBtnClick.js";
 import { movieCardCreate, movieCardClean } from "../moviesGalleryCreate/movieCardCreate.js";
 import { notiflixOptions, notiflixReportOptions } from "../utils/notiflixOptions.js";
 
@@ -19,6 +20,8 @@ async function onGalleryCardClick(evt) {
 
     const addToWatchedBtn = document.querySelector('button[data-add="watched"]');
     const addToHellBtn = document.querySelector('button[data-add="queue"]');
+    const trailerBtn = document.querySelector('button[data-tre="treiler"]');
+    trailerBtn.addEventListener('click', onTreilerBtnClick);
     const savedData = localStorage.getItem('saved-data');
     if (!savedData) {
             return;

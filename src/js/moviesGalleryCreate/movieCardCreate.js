@@ -3,7 +3,7 @@ import { refs } from "../refs/refs.js";
 const BASE_POSTER_URL = "https://image.tmdb.org/t/p/w500/";
 
 function movieCardCreate(data) {
-    const { genres, homepage, id, original_title, overview, popularity, poster_path, title, vote_average, vote_count } = data;
+    const { genres, id, original_title, overview, popularity, poster_path, title, vote_average, vote_count } = data;
     
     const genresString = genres.map((genre) => {
         return genre.name;
@@ -11,7 +11,7 @@ function movieCardCreate(data) {
     const cardString = `
 
                     <div class="modal-content" data-id="${id}">
-                        <div class="modal-content__left">
+                        <div class="modal-content__left no-poster">
                             <img src="${BASE_POSTER_URL}${poster_path}" alt="${title}" loading="lazy" />
                         </div>
                         <div class="modal-content__right">
