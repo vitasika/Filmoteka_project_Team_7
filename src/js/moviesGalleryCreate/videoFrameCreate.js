@@ -16,11 +16,11 @@ function videoFrameCreate(key) {
                         allowfullscreen>
                     </iframe>
                 `;
-    refs.modalMovieCard.insertAdjacentHTML('beforeend', cardString)
+    refs.modalTrailerFraim.insertAdjacentHTML('beforeend', cardString)
 };
 
 function videoFrameClean() {
-    refs.modalMovieCard.innerHTML = '';
+    refs.modalTrailerFraim.innerHTML = '';
 };
 
 export { videoFrameCreate, videoFrameClean };
