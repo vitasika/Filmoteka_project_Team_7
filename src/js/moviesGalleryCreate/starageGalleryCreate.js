@@ -13,16 +13,27 @@ function storageGalleryCreate(data) {
             } else if (numbLen < 3 || numbLen > 100) {
                 movieOverviev = "Click to watch more";
             } 
+
+            let movieGenresList = dataObj.movieGenres;
+            if (movieGenresList === "") {
+                movieGenresList = "UnKnown genre";
+            }
+
+            let moviePoster = BASE_POSTER_URL + dataObj.moviePoster;
+            if (!dataObj.moviePoster) {
+                moviePoster = "/images/no-pictures.png";
+            }
+            console.log(moviePoster);
             return `
 
                     <li class="item">
                         <article class="card">
                             <div class="card-thumb cards-wrapper no-poster">
-                                <img src="${BASE_POSTER_URL}${dataObj.moviePoster}" alt="${dataObj.movieTitle}" loading="lazy" />
+                                <img src="${moviePoster}" alt="${dataObj.movieTitle}" loading="lazy" />
                             </div>
                             <div class="card-content">
                                 <h2 class="card-heading"> ${dataObj.movieTitle} </h2>
-                                <p class="card-text"> ${dataObj.movieGenres} <span class="card-text-divide">|</span> ${dataObj.movieRelease_date} </p>
+                                <p class="card-text"> ${movieGenresList} <span class="card-text-divide">|</span> ${dataObj.movieRelease_date} </p>
                             </div>
                             <div class="cards-back-text">
                                 <span class="description_films" data-id="${dataObj.movieId_card}"> ${movieOverviev} </span>
