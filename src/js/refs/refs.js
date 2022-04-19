@@ -46,10 +46,8 @@ const refs = {
   inputEl: document.querySelector('.search-form__input'),
   modalMovieCard: document.querySelector('div[data-act="create"]'),
   paginationConteiner: document.querySelector('.pagination-container'),
-  tuiFirst: document.querySelector('.tui-first'),
-  tuiLast: document.querySelector(".tui-last"),
-  tuiDots: document.querySelector('.tui-last'),
-  tuiDotsPrev: document.querySelector('.tui-prev-is-ellip'),
+  tuiPrev: document.querySelector('.tui-prev'),
+  tuiNext: document.querySelector('.tui-next'),
 };
 
 export { refs };

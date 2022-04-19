@@ -61,7 +61,8 @@ const options = {
     lastItemClassName: 'tui-last-child',
 };
 if (window.innerWidth < 767) {
-    options.visiblePages = 5;
+    options.visiblePages = 4;
 }
+
 
 export { popularMoviesLoad };
