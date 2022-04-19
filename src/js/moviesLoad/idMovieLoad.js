@@ -15,8 +15,10 @@ async function idMovieLoad(evt) {
     movieCardClean();
 
     try {
+        
         const dataObj = await moviesApiService.fetchMovieId();
-        // console.log(dataObj);
+        const dataTreiler = await moviesApiService.fetchMovieTrailer();
+        // console.log(dataTreiler);
         // console.log(moviesApiService.dataStorageObj)
 
         movieCardCreate(dataObj);
@@ -24,7 +26,6 @@ async function idMovieLoad(evt) {
         const addToQeueBtn = document.querySelector('button[data-add="queue"]');
         addToWatchedBtn.addEventListener('click', onAddToWatchClick);
         addToQeueBtn.addEventListener('click', onAddToHellClick);
-
         
     } catch (error) {
         errorCatch(error);

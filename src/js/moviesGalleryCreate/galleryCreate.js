@@ -14,7 +14,7 @@ function galleryCollectionCreate(data,dataGen) {
             return `
                         <li class="item">
                             <article class="card">
-                                <div class="card-thumb cards-wrapper">
+                                <div class="card-thumb cards-wrapper no-poster">
                                     <img src="${BASE_POSTER_URL}${poster_path}" alt="${title}" loading="lazy" />
                                 </div>
                                 <div class="card-content">

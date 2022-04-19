@@ -10,7 +10,7 @@ function storageGalleryCreate(data) {
 
                     <li class="item">
                         <article class="card">
-                            <div class="card-thumb cards-wrapper">
+                            <div class="card-thumb cards-wrapper no-poster">
                                 <img src="${BASE_POSTER_URL}${dataObj.moviePoster}" alt="${dataObj.movieTitle}" loading="lazy" />
                             </div>
                             <div class="card-content">
