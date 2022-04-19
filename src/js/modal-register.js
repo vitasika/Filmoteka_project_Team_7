@@ -1,12 +1,5 @@
 import { createUser } from './firebase/firebaseAuth';
-
-const refsReg = {
-  openModalBtnReg: document.querySelector('[modal-registration-open]'),
-  closeModalBtnReg: document.querySelector('[modal-registration-close]'),
-  modalReg: document.querySelector('[modal-registration-data]'),
-  registrationForm: document.querySelector('#registration-form'),
-  registrationContainer: document.querySelector('#modal-registration__id'),
-};
+import { refs } from './refs/refs';
 
 let userData = {
   firstname: '',
@@ -15,23 +8,23 @@ let userData = {
   confirmpwd: '',
 };
 
-refsReg.openModalBtnReg.addEventListener('click', toggleModal);
-refsReg.closeModalBtnReg.addEventListener('click', toggleModal);
-refsReg.registrationForm.addEventListener('input', onFormInput);
-refsReg.registrationForm.addEventListener('submit', onFormSubmit);
+refs.openModalBtnReg.addEventListener('click', toggleModal);
+refs.closeModalBtnReg.addEventListener('click', toggleModal);
+refs.registrationForm.addEventListener('input', onFormInput);
+refs.registrationForm.addEventListener('submit', onFormSubmit);
 
 function toggleModal(e) {
   e.preventDefault();
-  refsReg.modalReg.classList.toggle('profile-hidden');
+  refs.modalReg.classList.toggle('profile-hidden');
 
   let mpodalProfileH = document.getElementById('modal-registration__id').scrollHeight;
   let vpHeight = document.body.clientHeight;
 
   if (vpHeight < mpodalProfileH) {
-    refsReg.registrationContainer.style.height = `${vpHeight}px`;
+    refs.registrationContainer.style.height = `${vpHeight}px`;
   }
   if (vpHeight >= mpodalProfileH) {
-    refsReg.registrationContainer.style.height = 'auto';
+    refs.registrationContainer.style.height = 'auto';
   }
 
    if (document.body.classList.contains('modal-profile__disabled-scroll')) {
@@ -74,7 +67,7 @@ function onFormSubmit(e) {
   createUser();
   e.target.reset();
   resetUserData();
-  refsReg.modalReg.classList.toggle('profile-hidden');
+  refs.modalReg.classList.toggle('profile-hidden');
 }
 
 function resetUserData() {

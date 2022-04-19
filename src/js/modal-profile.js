@@ -1,12 +1,4 @@
-const refs = {
-  openModalBtn: document.querySelector('[modal-profile-open]'),
-  closeModalBtn: document.querySelector('[modal-profile-close]'),
-  modal: document.querySelector('[modal-profile-data]'),
-  registerClose: document.querySelector('[modal-profile-register]'),
-  closeUserBtn: document.querySelector('[modal-user-close]'),
-  profileCross: document.querySelector('.modal-profile-cross'),
-  profileContainer: document.querySelector('#modal-profile__id'),
-};
+import { refs } from './refs/refs';
 
 refs.openModalBtn.addEventListener('click', toggleModal);
 refs.closeModalBtn.addEventListener('click', toggleModal);
@@ -18,7 +10,7 @@ refs.profileCross.addEventListener('mouseleave', toggleMerylin);
 function toggleModal(e) {
   e.preventDefault();
  
-  refs.modal.classList.toggle('profile-hidden');
+  refs.modalProfile.classList.toggle('profile-hidden');
 
   let mpodalProfileH = document.getElementById('modal-profile__id').scrollHeight;
   let vpHeight = document.body.clientHeight;

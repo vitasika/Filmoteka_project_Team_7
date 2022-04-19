@@ -9,9 +9,21 @@ const refs = {
   teamModalEl: document.querySelector('[data-modal-backdrop]'),
   closeBtn: document.querySelector('.cross'),
   headerLogoRef: document.querySelector('.header-logo'),
+
   openModalBtn: document.querySelector('[modal-profile-open]'),
   closeModalBtn: document.querySelector('[modal-profile-close]'),
-  modal: document.querySelector('[modal-profile-data]'),
+  modalProfile: document.querySelector('[modal-profile-data]'),
+  registerClose: document.querySelector('[modal-profile-register]'),
+  closeUserBtn: document.querySelector('[modal-user-close]'),
+  profileCross: document.querySelector('.modal-profile-cross'),
+  profileContainer: document.querySelector('#modal-profile__id'),
+
+  openModalBtnReg: document.querySelector('[modal-registration-open]'),
+  closeModalBtnReg: document.querySelector('[modal-registration-close]'),
+  modalReg: document.querySelector('[modal-registration-data]'),
+  registrationForm: document.querySelector('#registration-form'),
+  registrationContainer: document.querySelector('#modal-registration__id'),
+
   modalEl: document.querySelector('[data-modal]'),
   buttonClose: document.querySelector('.modal__close-button'),
   cardList: document.querySelector('.card-set'),
@@ -34,3 +46,6 @@ const refs = {
 };
 
 export { refs };
+
+
+ 
