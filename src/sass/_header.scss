@@ -17,6 +17,7 @@
   padding-bottom: 90px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
     url('../images/mobi/Rectangle_mobi.jpg');
+  background-size: cover;
 
   @media screen and (min-width: 768px) {
     padding-bottom: 80px;
@@ -30,9 +31,49 @@
   }
 }
 
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .header-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    url('../images/mobi/Rectangle_mobi_2x.jpg');
+
+    @media screen and (min-width: 768px) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url('../images/tab/Rectangle_tab_2x.jpg');
+    }
+
+    @media screen and (min-width: 1024px) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url('../images/Rectangle_2x.jpg');
+    }
+  }
+}
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 288dpi),
+  (min-resolution: 3dppx) {
+  .header-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    url('../images/mobi/Rectangle_mobi_3x.jpg');
+
+    @media screen and (min-width: 768px) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url('../images/tab/Rectangle_tab_3x.jpg');
+    }
+
+    @media screen and (min-width: 1024px) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url('../images/Rectangle_3x.jpg');
+    }
+  }
+}
+
 .header-container.header-container--library {
     padding-bottom:  60px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url('../images/mobi/Rectangle_watched_mobi.jpg');
+  background-size: cover;
+
 
     @media screen and (min-width: 768px) {
         background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url('../images/tab/Rectangle_watched_tab.jpg');
@@ -43,6 +84,44 @@
 
     }
 }
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    .header-container.header-container--library {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    url('../images/mobi/Rectangle_watched_mobi_2x.jpg');
+
+    @media screen and (min-width: 768px) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url('../images/tab/Rectangle_watched_tab_2x.jpg');
+    }
+
+    @media screen and (min-width: 1024px) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url('../images/Rectangle_watched_2x.jpg');
+    }
+  }
+  }
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 288dpi),
+  (min-resolution: 3dppx) {
+    .header-container.header-container--library {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    url('../images/mobi/Rectangle_watched_mobi_2x.jpg');
+
+    @media screen and (min-width: 768px) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url('../images/tab/Rectangle_watched_tab_2x.jpg');
+    }
+
+    @media screen and (min-width: 1024px) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url('../images/Rectangle_watched_2x.jpg');
+    }
+  }
+  }
 
 .wrapper-nav {
   display: flex;
