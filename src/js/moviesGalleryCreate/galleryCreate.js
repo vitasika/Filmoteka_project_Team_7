@@ -14,6 +14,7 @@ function galleryCollectionCreate(data,dataGen) {
             const genres = ganresArrey.join(', ');
             let movieGenresList = genres;
             let movieOverviev = overview;
+            let moviePoster = BASE_POSTER_URL + poster_path;
             const numbLen = overview.trim().split(" ").length;
             if (numbLen === "") {
                 movieOverviev = "Sory there is no overview of that movie";
@@ -23,11 +24,16 @@ function galleryCollectionCreate(data,dataGen) {
             if (movieGenresList === "") {
                 movieGenresList = "UnKnown genre";
             }
+            if (!poster_path) {
+                moviePoster = "/images/no-pictures.png";
+            }
+            console.log(moviePoster);
+            
             return `
                         <li class="item">
                             <article class="card">
                                 <div class="card-thumb cards-wrapper no-poster">
-                                    <img src="${BASE_POSTER_URL}${poster_path}" alt="${title}" loading="lazy" />
+                                    <img src="${moviePoster}" alt="${title}" loading="lazy" />
                                 </div>
                                 <div class="card-content">
                                     <h2 class="card-heading"> ${title} </h2>

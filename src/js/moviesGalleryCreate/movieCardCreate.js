@@ -24,11 +24,17 @@ function movieCardCreate(data) {
         movieGenresString = "None";
     }
 
+    let moviePoster = BASE_POSTER_URL + poster_path;
+    if (!poster_path) {
+        moviePoster = "/images/no-pictures.png";
+    }
+    console.log(moviePoster);
+
     const cardString = `
 
                     <div class="modal-content" data-id="${id}">
                         <div class="modal-content__left no-poster">
-                            <img src="${BASE_POSTER_URL}${poster_path}" alt="${title}" loading="lazy" />
+                            <img src="${moviePoster}" alt="${title}" loading="lazy" />
                         </div>
                         <div class="modal-content__right">
                             <h2 class="modal-content__film-title primary-text--black"> ${title} </h2>

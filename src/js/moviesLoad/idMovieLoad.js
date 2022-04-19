@@ -18,7 +18,7 @@ async function idMovieLoad(evt) {
         
         const dataObj = await moviesApiService.fetchMovieId();
         const dataTreiler = await moviesApiService.fetchMovieTrailer();
-        // console.log(dataTreiler);
+        console.log(dataObj);
         // console.log(moviesApiService.dataStorageObj)
 
         movieCardCreate(dataObj);
