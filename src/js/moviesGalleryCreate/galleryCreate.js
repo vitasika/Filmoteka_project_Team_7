@@ -33,7 +33,7 @@ function galleryCollectionCreate(data,dataGen) {
                         <li class="item">
                             <article class="card">
                                 <div class="card-thumb cards-wrapper no-poster">
-                                    <img src="${moviePoster}" alt="${title}" loading="lazy" />
+                                    <img src="${moviePoster}" alt="" loading="lazy" />
                                 </div>
                                 <div class="card-content">
                                     <h2 class="card-heading"> ${title} </h2>
