@@ -1,4 +1,6 @@
 const refs = {
+  closeTrailer: document.querySelector('.modal-window-trailer__button-close'),
+  modalTrailer: document.querySelector('.backdrop-trailer'),
   bodyEl: document.querySelector('body'),
   headerContainerRef: document.querySelector('.header-container'),
   headerMyLibraryRef: document.querySelector('#header-myLibrary'),
@@ -46,6 +48,3 @@ const refs = {
 };
 
 export { refs };
-
-
- 

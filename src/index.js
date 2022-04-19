@@ -3,8 +3,9 @@ import './js/header';
 import './js/pagination';
 import './js/to_top';
 import './js/modal';
+import './js/modal-trailer';
 import './js/team-modal/team-modal';
 import './js/modal-profile';
 import './js/modal-register';
 import './js/firebase/firebaseAuth';
-import './js/moviesGallery.js'
+import './js/moviesGallery.js';
