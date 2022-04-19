@@ -8,6 +8,22 @@ function movieCardCreate(data) {
     const genresString = genres.map((genre) => {
         return genre.name;
     }).join(', ');
+
+    let movieOverviev = overview;
+    if (movieOverviev === "") {
+        movieOverviev = "Sory there is no overview of that movie";
+    }
+
+    let movieOriginalTitle = original_title;
+    if (movieOriginalTitle === "") {
+        movieOriginalTitle = "None";
+    }
+
+    let movieGenresString = genresString;
+    if (movieGenresString === "") {
+        movieGenresString = "None";
+    }
+
     const cardString = `
 
                     <div class="modal-content" data-id="${id}">
@@ -44,7 +60,7 @@ function movieCardCreate(data) {
                                         </td>
                                         <td>
                                             <p class="modal-content__primary-text modal-content__original-title primary-text--black">
-                                                ${original_title}
+                                                ${movieOriginalTitle}
                                             </p>
                                         </td>
                                     </tr>
@@ -53,7 +69,7 @@ function movieCardCreate(data) {
                                             <p class="modal-content__primary-text primary-text--grey">Genre</p>
                                         </td>
                                         <td>
-                                            <p class="modal-content__primary-text"> ${genresString} </p>
+                                            <p class="modal-content__primary-text"> ${movieGenresString} </p>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -61,7 +77,7 @@ function movieCardCreate(data) {
                             <div class="modal-content__about-container">
                                 <p class="modal-content__about-title modal-content__primary-text">about</p>
                                 <p class="modal-content__primary-text primary-text--black modal-content__about-text-lh">
-                                    ${overview}
+                                    ${movieOverviev}
                                 </p>
                                 
                             </div>

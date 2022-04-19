@@ -9,8 +9,16 @@ function galleryCollectionCreate(data,dataGen) {
             genre_ids.map((genre_id) => {
                 ganresArrey.push(dataGen.find(genere => genere.id === genre_id).name);
                 return ganresArrey;
+
             });
             const genres = ganresArrey.join(', ');
+            let movieOverviev = overview;
+            const numbLen = overview.trim().split(" ").length;
+            if (numbLen === "") {
+                movieOverviev = "Sory there is no overview of that movie";
+            } else if (numbLen < 3 || numbLen > 100) {
+                movieOverviev = "Click to watch more";
+            } 
             return `
                         <li class="item">
                             <article class="card">
@@ -22,7 +30,7 @@ function galleryCollectionCreate(data,dataGen) {
                                     <p class="card-text"> ${genres} <span class="card-text-divide">|</span> ${release_date.slice(0, 4)} </p>
                                 </div>
                                 <div class="cards-back-text">
-                                    <span class="description_films" data-id="${id}"> ${overview} </span>
+                                    <span class="description_films" data-id="${id}"> ${movieOverviev} </span>
                                 </div>
                             </article>
                         </li>
