@@ -11,6 +11,15 @@ import { getOnDatabase } from '../firebase/firebaseAuth';
 import { notiflixOptions, notiflixReportOptions } from "../utils/notiflixOptions.js";
 
 function onHellBtnClick(evt) {
+    const watchedBtn = document.querySelector('button[data-load="watch"]');
+    const qeueBtn = document.querySelector('button[data-load="qeue"]');
+    watchedBtn.style.backgroundColor = "transparent";
+    watchedBtn.style.color = "#FFFFFF";
+    watchedBtn.style.borderColor = "#FFFFFF";
+    qeueBtn.style.backgroundColor = "#FF6B01";
+    qeueBtn.style.color = "#FFFFFF";
+    qeueBtn.style.borderColor = "#FF6B01";
+
     const savedData = localStorage.getItem('saved-data');
     // const savedData = await getOnDatabase();
     if (!savedData) {
