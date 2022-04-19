@@ -12,6 +12,7 @@ function galleryCollectionCreate(data,dataGen) {
 
             });
             const genres = ganresArrey.join(', ');
+            let movieGenresList = genres;
             let movieOverviev = overview;
             const numbLen = overview.trim().split(" ").length;
             if (numbLen === "") {
@@ -19,6 +20,9 @@ function galleryCollectionCreate(data,dataGen) {
             } else if (numbLen < 3 || numbLen > 100) {
                 movieOverviev = "Click to watch more";
             } 
+            if (movieGenresList === "") {
+                movieGenresList = "UnKnown genre";
+            }
             return `
                         <li class="item">
                             <article class="card">
@@ -27,7 +31,7 @@ function galleryCollectionCreate(data,dataGen) {
                                 </div>
                                 <div class="card-content">
                                     <h2 class="card-heading"> ${title} </h2>
-                                    <p class="card-text"> ${genres} <span class="card-text-divide">|</span> ${release_date.slice(0, 4)} </p>
+                                    <p class="card-text"> ${movieGenresList} <span class="card-text-divide">|</span> ${release_date.slice(0, 4)} </p>
                                 </div>
                                 <div class="cards-back-text">
                                     <span class="description_films" data-id="${id}"> ${movieOverviev} </span>
