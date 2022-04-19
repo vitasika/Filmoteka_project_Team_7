@@ -35,4 +35,11 @@ export default function onMyLibraryClick(e) {
   const qeueBtn = document.querySelector('button[data-load="qeue"]');
   watchedBtn.addEventListener('click', onWatchedBtnClick);
   qeueBtn.addEventListener('click', onHellBtnClick);
+  watchedBtn.style.backgroundColor = "transparent";
+  watchedBtn.style.color = "#FFFFFF";
+  watchedBtn.style.borderColor = "#FFFFFF";
+  qeueBtn.style.backgroundColor = "transparent";
+  qeueBtn.style.color = "#FFFFFF";
+  qeueBtn.style.borderColor = "#FFFFFF";
+
 }
