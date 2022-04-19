@@ -9,7 +9,8 @@ import { videoFrameCreate, videoFrameClean } from "../moviesGalleryCreate/videoF
 import { notiflixOptions, notiflixReportOptions } from "../utils/notiflixOptions.js";
 
 function onTreilerBtnClick(evt) {
-    // videoFrameClean();
-    // videoFrameCreate(moviesApiService.dataStorageObj.movieKey);
+    refs.modalTrailer.classList.remove('modal-trailer--hidden');
+    videoFrameClean();
+    videoFrameCreate(moviesApiService.dataStorageObj.movieKey);
 }
 export { onTreilerBtnClick };

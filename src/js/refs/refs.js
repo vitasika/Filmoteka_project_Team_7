@@ -1,5 +1,6 @@
 const refs = {
   closeTrailer: document.querySelector('.modal-window-trailer__button-close'),
+  modalTrailerFraim: document.querySelector('.trailer-video'),
   modalTrailer: document.querySelector('.backdrop-trailer'),
   bodyEl: document.querySelector('body'),
   headerContainerRef: document.querySelector('.header-container'),

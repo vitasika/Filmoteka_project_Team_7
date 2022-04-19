@@ -85,7 +85,7 @@ export default class MoviesApiService {
         const { data } = dataObject;
         console.log(data.results.length);
         if (data.results.length === 0 || !data.results[0].key) {
-            return;
+            return this.dataStorageObj.movieKey = 0;
         }
         
         this.dataStorageObj.movieKey = data.results[0].key;

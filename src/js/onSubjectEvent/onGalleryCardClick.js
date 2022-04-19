@@ -20,8 +20,16 @@ async function onGalleryCardClick(evt) {
 
     const addToWatchedBtn = document.querySelector('button[data-add="watched"]');
     const addToHellBtn = document.querySelector('button[data-add="queue"]');
-    // const trailerBtn = document.querySelector('button[data-tre="treiler"]');
-    // trailerBtn.addEventListener('click', onTreilerBtnClick);
+    const trailerBtn = document.querySelector('button[data-add="trailer"]');
+    trailerBtn.addEventListener('click', onTreilerBtnClick);
+    if (trailerBtn.classList.contains("btnTrailerNone")) {
+        trailerBtn.classList.remove("btnTrailerNone");
+    }
+
+    if (moviesApiService.dataStorageObj.movieKey === 0) {
+        trailerBtn.classList.add("btnTrailerNone");
+    }
+
     const savedData = localStorage.getItem('saved-data');
     if (!savedData) {
         return;
