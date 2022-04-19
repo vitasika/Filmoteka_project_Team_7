@@ -29,7 +29,7 @@ function storageGalleryCreate(data) {
                     <li class="item">
                         <article class="card">
                             <div class="card-thumb cards-wrapper no-poster">
-                                <img src="${moviePoster}" alt="" onerror="this.style.visibility = 'hidden'" loading="lazy" />
+                                <img src="${moviePoster}" alt="${dataObj.movieTitle}" onerror="this.style.visibility = 'hidden'" loading="lazy" />
                             </div>
                             <div class="card-content">
                                 <h2 class="card-heading"> ${dataObj.movieTitle} </h2>
