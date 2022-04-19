@@ -1,6 +1,10 @@
 .pagination-container {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .tui-pagination * {
@@ -32,7 +36,6 @@
   width: 40px;
   height: 40px;
   padding: 13px 13px 11px 13px;
-  margin-left: 10px;
   color: #000000;
   border: transparent;
   font-weight: 500;
@@ -44,6 +47,9 @@
   text-decoration: none;
   vertical-align: middle;
 
+  @media screen and (min-width: 768px) {
+    margin-left: 10px;
+  }
   /* border-width: 1px 0; */
 }
 
@@ -134,11 +140,15 @@
 }
 
 .tui-pagination.custom-tui-pagination .tui-prev {
-  margin-right: 10px;
+  @media screen and (min-width: 768px) {
+    margin-left: 10px;
+  }
 }
 
 .tui-pagination.custom-tui-pagination .tui-next {
-  margin-left: 10px;
+  @media screen and (min-width: 768px) {
+    margin-left: 10px;
+  }
 }
 
 .tui-pagination.custom-tui-pagination .tui-ico-first {
@@ -225,4 +235,30 @@
 
 .paginationNone {
   display: none;
+}
+
+.tui-pagination.custom-tui-pagination .tui-prev-is-ellip,
+.tui-pagination.custom-tui-pagination .tui-next-is-ellip {
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+  }
+}
+
+.tui-pagination.custom-tui-pagination .tui-first,
+.tui-pagination.custom-tui-pagination .tui-last {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
