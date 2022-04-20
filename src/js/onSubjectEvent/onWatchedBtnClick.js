@@ -1,16 +1,13 @@
 import Notiflix from 'notiflix';
 import { Loading } from 'notiflix/build/notiflix-loading-aio';
 import { refs } from "../refs/refs.js";
-import { moviesApiService } from "../moviesGallery.js";
-import MoviesApiService from "../MoviesApiService/moviesApiService.js";
-import { errorCatch } from "../utils/errorCatch.js";
 import { galleryCollectionCreate, galleryClean } from "../moviesGalleryCreate/galleryCreate.js";
 import { storageGalleryCreate } from "../moviesGalleryCreate/starageGalleryCreate.js";
-import { setOnDatabase } from '../firebase/firebaseAuth';
-import { getOnDatabase } from '../firebase/firebaseAuth';
+// import { setOnDatabase } from '../firebase/firebaseAuth';
+// import { getOnDatabase } from '../firebase/firebaseAuth';
 import { notiflixOptions, notiflixReportOptions } from "../utils/notiflixOptions.js";
 
-async function onWatchedBtnClick(evt) {
+function onWatchedBtnClick(evt) {
     const watchedBtn = document.querySelector('button[data-load="watch"]');
     const qeueBtn = document.querySelector('button[data-load="qeue"]');
     qeueBtn.style.backgroundColor = "transparent";

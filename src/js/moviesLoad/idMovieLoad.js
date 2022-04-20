@@ -1,8 +1,4 @@
-import Notiflix from 'notiflix';
-import { Loading } from 'notiflix/build/notiflix-loading-aio';
-import { refs } from "../refs/refs.js";
 import { moviesApiService } from "../moviesGallery.js";
-import MoviesApiService from "../MoviesApiService/moviesApiService.js";
 import { errorCatch } from "../utils/errorCatch.js";
 import { getScrollBarWidth, clickCard } from "../modal.js"
 import { movieCardCreate, movieCardClean } from "../moviesGalleryCreate/movieCardCreate.js";
@@ -18,7 +14,7 @@ async function idMovieLoad(evt) {
         
         const dataObj = await moviesApiService.fetchMovieId();
         const dataTreiler = await moviesApiService.fetchMovieTrailer();
-        console.log(dataObj);
+        // console.log(dataObj);
         // console.log(moviesApiService.dataStorageObj)
 
         movieCardCreate(dataObj);

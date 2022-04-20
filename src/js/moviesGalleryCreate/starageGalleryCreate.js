@@ -24,7 +24,7 @@ function storageGalleryCreate(data) {
             if (!dataObj.moviePoster) {
                 moviePoster = noPoster;
             }
-            console.log(moviePoster);
+            // console.log(moviePoster);
             return `
 
                     <li class="item">
