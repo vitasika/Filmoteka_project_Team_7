@@ -1,11 +1,20 @@
 import { createUser } from './firebase/firebaseAuth';
 import { refs } from './refs/refs';
+import Notiflix from 'notiflix';
 
 let userData = {
   firstname: '',
   email: '',
   pwd: '',
   confirmpwd: '',
+};
+
+const notiflixOptions = {
+    timeout: 6000,
+    clickToClose: true,
+    fontSize: '20px',
+    width: '700px',
+    position: 'center-top',
 };
 
 refs.openModalBtnReg.addEventListener('click', toggleModal);
@@ -71,27 +80,27 @@ function validation() {
     userData.pwd === '' ||
     userData.confirmpwd === ''
   ) {
-    alert('There are empty fileds. Please, fill in all the fields.');
+    Notiflix.Notify.failure('There are empty fileds. Please, fill in all the fields.',notiflixOptions);
     return false;
   }
 
   if (userData.pwd !== userData.confirmpwd) {
-    alert('Passwords do not match. Please, enter correct confirmation password.');
+    Notiflix.Notify.failure('Passwords do not match. Please, enter correct confirmation password.',notiflixOptions);
     return false;
   }
 
   if (!nameRegEx.test(userData.firstname)) {
-    alert("The name should contain only Latin alphabets");
+    Notiflix.Notify.failure("The name should contain only Latin alphabets",notiflixOptions);
     return false;
   }
 
   if (!emailRegEx.test(userData.email)) {
-    alert("Enter a valid email");
+    Notiflix.Notify.failure("Enter a valid email",notiflixOptions);
     return false;
   }
 
   if (!pwdRegEx.test(userData.pwd)) {
-    alert("The password should contain at least 6 alphabets and/or numbers");
+    Notiflix.Notify.failure("The password should contain at least 6 alphabets and/or numbers",notiflixOptions);
     return false;
   }
 
