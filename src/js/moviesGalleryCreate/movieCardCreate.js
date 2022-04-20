@@ -1,4 +1,5 @@
 import { refs } from "../refs/refs.js";
+import noPoster from '/images/no-pictures.png';
 
 const BASE_POSTER_URL = "https://image.tmdb.org/t/p/w500/";
 
@@ -26,7 +27,7 @@ function movieCardCreate(data) {
 
     let moviePoster = BASE_POSTER_URL + poster_path;
     if (!poster_path) {
-        moviePoster = "/images/no-pictures.png";
+        moviePoster = noPoster;
     }
     console.log(moviePoster);
 
