@@ -12,6 +12,7 @@ import {
 } from 'firebase/auth';
 import { getDatabase, ref, set, onValue, push } from 'firebase/database';
 import { refs } from '../refs/refs';
+import Notiflix from 'notiflix';
 const firebaseConfig = {
   apiKey: 'AIzaSyBgFVW820S_orUiL-KRqyb88sulmcWmLHE',
   authDomain: 'fir-962a4.firebaseapp.com',
@@ -34,12 +35,14 @@ function createUser(e) {
   const password = refs.regForm.pwd.value;
   const displayName = refs.regForm.firstname.value;
 
-  createUserWithEmailAndPassword(auth, email, password).then(userCredential => {
-    // Signed in
-    const user = userCredential.user;
-    user.displayName = displayName;
-    writeUserData(user);
-  });
+  createUserWithEmailAndPassword(auth, email, password)
+    .then(userCredential => {
+      // Signed in
+      const user = userCredential.user;
+      user.displayName = displayName;
+      writeUserData(user);
+    })
+    .catch(Notiflix.Notify.success('This email already use.'));
 }
 
 function writeUserData(user) {
@@ -50,7 +53,7 @@ function writeUserData(user) {
   })
     .then(() => {})
     .catch(error => {
-      alert('Sorry smth happened' + error);
+      Notiflix.Notify.success('Oops, smth happened.');
     })
     .catch(error => {
       const errorCode = error.code;
