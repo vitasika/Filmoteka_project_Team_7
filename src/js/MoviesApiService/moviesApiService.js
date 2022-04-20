@@ -90,7 +90,6 @@ export default class MoviesApiService {
         
         this.dataStorageObj.movieKey = data.results[0].key;
         
-        
         Loading.remove(); // библ. Notiflix
         return data.results[0].key;
     }

@@ -2,7 +2,6 @@ import Notiflix from 'notiflix';
 import { Loading } from 'notiflix/build/notiflix-loading-aio';
 import { refs } from "../refs/refs.js";
 import { moviesApiService } from "../moviesGallery.js";
-import MoviesApiService from "../MoviesApiService/moviesApiService.js";
 import { errorCatch } from "../utils/errorCatch.js";
 import { galleryCollectionCreate, galleryClean } from "../moviesGalleryCreate/galleryCreate.js";
 import { notiflixOptions, notiflixReportOptions } from "../utils/notiflixOptions.js";
@@ -11,13 +10,16 @@ import 'tui-pagination/dist/tui-pagination.css';
 
 const options = {
     totalItems: 1000,
-        itemsPerPage: 20,
-        visiblePages: 7,
+    itemsPerPage: 20,
+       visiblePages: 7,
         centerAlign: false,
     page: 1,
     firstItemClassName: 'tui-first-child',
     lastItemClassName: 'tui-last-child',
 };
+if (window.innerWidth < 767) {
+    options.visiblePages = 4;
+}
 
 async function searchMoviesLoad() {
     
