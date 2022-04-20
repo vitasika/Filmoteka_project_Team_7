@@ -1,4 +1,5 @@
 import { refs } from "../refs/refs.js";
+import noPoster from '/images/no-pictures.png';
 
 const BASE_POSTER_URL = "https://image.tmdb.org/t/p/w500/";
 
@@ -21,7 +22,7 @@ function storageGalleryCreate(data) {
 
             let moviePoster = BASE_POSTER_URL + dataObj.moviePoster;
             if (!dataObj.moviePoster) {
-                moviePoster = "/images/no-pictures.png";
+                moviePoster = noPoster;
             }
             console.log(moviePoster);
             return `
