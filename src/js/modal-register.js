@@ -45,29 +45,12 @@ function onFormInput(e) {
 function onFormSubmit(e) {
   e.preventDefault();
 
-  if (
-    userData.firstname === '' ||
-    userData.email === '' ||
-    userData.pwd === '' ||
-    userData.confirmpwd === ''
-  ) {
-    alert('There are empty fileds. Please, fill in all the fields.');
-    return;
-  }
-
-  if (userData.pwd.length < 6) {
-    alert('Password must be at least 6 characters long.');
-    return;
-  }
-
-  if (userData.pwd !== userData.confirmpwd) {
-    alert('Passwords do not match. Please, enter correct confirmation password.');
-    return;
-  }
+  if(validation()){
   createUser();
   e.target.reset();
   resetUserData();
   refs.modalReg.classList.toggle('profile-hidden');
+  }
 }
 
 function resetUserData() {
@@ -75,4 +58,42 @@ function resetUserData() {
   userData.email = '';
   userData.pwd = '';
   userData.confirmpwd = '';
+}
+
+function validation() {
+  let nameRegEx = /^[a-zA-Z\ ]+$/;
+  let emailRegEx = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i;
+  let pwdRegEx = /^[a-zA-Z0-9]{6,10}$/;
+
+  if (
+    userData.firstname === '' ||
+    userData.email === '' ||
+    userData.pwd === '' ||
+    userData.confirmpwd === ''
+  ) {
+    alert('There are empty fileds. Please, fill in all the fields.');
+    return false;
+  }
+
+  if (userData.pwd !== userData.confirmpwd) {
+    alert('Passwords do not match. Please, enter correct confirmation password.');
+    return false;
+  }
+
+  if (!nameRegEx.test(userData.firstname)) {
+    alert("The name should contain only Latin alphabets");
+    return false;
+  }
+
+  if (!emailRegEx.test(userData.email)) {
+    alert("Enter a valid email");
+    return false;
+  }
+
+  if (!pwdRegEx.test(userData.pwd)) {
+    alert("The password should contain at least 6 alphabets and/or numbers");
+    return false;
+  }
+
+  return true;
 }
