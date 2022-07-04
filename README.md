@@ -1,4 +1,4 @@
-## Filmoteka
+# Filmoteka
 
 ссылка на макет в Figma: https://www.figma.com/file/591hZYsJXnmpPAozh57yWd/Filmoteka-(Copy)?node-id=0%3A1
 
